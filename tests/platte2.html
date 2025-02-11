@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .platte {
+        position: relative; /* Platte relativ positionieren */
+        width: 200px;
+        height: 100px;
+        background: var(--color, #4caf50); /* Dynamische Farbe */
+        transform-style: preserve-3d;
+        transform: rotateX(var(--rotateX, 0deg)) rotateY(var(--rotateY, 0deg))
+          translateZ(0); /* Stacking Context erzwingen */
+        transition: transform 0.5s ease;
+        margin: 20px;
+        border-radius: 15px; /* Runde Ecken */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Weicher 3D-Effekt */
+        z-index: 1; /* Platte hat einen höheren z-index */
+      }
+
+      .platte::after {
+        content: "";
+        position: absolute;
+        top: -4px;
+        left: 6px;
+        width: 101%;
+        height: 103%;
+        background: rgb(186 0 19);
+        border-radius: inherit;
+        /* filter: blur(10px); */
+        z-index: -1;
+        transform: translateZ(-1px);
+      }
+
+      .platte:hover {
+        transform: rotateX(calc(var(--rotateX, 0deg) - 10deg))
+          rotateY(calc(var(--rotateY, 0deg) - 10deg));
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Intensiverer Schatten */
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      id="platte1"
+      class="platte"
+      data-rotate-x="30"
+      data-rotate-y="45"
+      data-color="#4caf50"
+    ></div>
+
+    <div
+      id="platte2"
+      class="platte"
+      data-rotate-x="20"
+      data-rotate-y="60"
+      data-color="#ff5722"
+    ></div>
+    <script>
+      let stylesheet = document.querySelector("#dynamic-styles");
+      if (!stylesheet) {
+        stylesheet = document.createElement("style");
+        stylesheet.id = "dynamic-styles";
+        document.head.appendChild(stylesheet);
+      }
+
+      document.querySelectorAll(".platte").forEach((platte) => {
+        const rotateX = platte.getAttribute("data-rotate-x") || "0";
+        const rotateY = platte.getAttribute("data-rotate-y") || "0";
+        const color = platte.getAttribute("data-color") || "#4caf50";
+        const id = platte.id; // ID der Platte
+
+        stylesheet.sheet.insertRule(
+          `
+    #${id} {
+      --rotateX: ${rotateX}deg;
+      --rotateY: ${rotateY}deg;
+      --color: ${color};
+    }
+  `,
+          stylesheet.sheet.cssRules.length
+        );
+      });
+    </script>
+  </body>
+</html>
