@@ -1,22 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
-    gsap.registerPlugin(ScrollTrigger);
+    const section = document.querySelector(".howItsWork");
 
-    
-    gsap.fromTo(
-        [".howItsWorkImg", ".howHaeder h2", ".howHaeder span"], 
-        { opacity: 0, x: -100 }, 
-        {
-            opacity: 1,
-            x: 0,
-            duration: 1.5,
-            ease: "power2.out",
-            scrollTrigger: {
-                trigger: ".howItsWork",
-                start: "top 80%",  
-                end: "top 20%",    
-                scrub: true,       
-                toggleActions: "play reverse play reverse" 
-            }
+    function handleScroll() {
+        const sectionPosition = section.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.3; // Adjust trigger point
+
+        if (sectionPosition < screenPosition) {
+            section.classList.add("show");
+            window.removeEventListener("scroll", handleScroll); // Runs only once
         }
-    );
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Run once in case it's already in view
 });
