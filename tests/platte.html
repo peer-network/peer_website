@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .platte {
+        position: relative;
+        width: 200px;
+        height: 100px;
+        transform-style: preserve-3d;
+        transform: rotateX(var(--rotateX, 0deg)) rotateY(var(--rotateY, 0deg));
+        transition: transform 0.5s ease;
+        margin: 20px;
+        --color: #4caf50; /* Standardfarbe als Fallback */
+        --border-radius: 15px; /* Radius der Ecken */
+      }
+
+      .vorderseite {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: var(--color);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+        border-radius: var(--border-radius);
+      }
+
+      .kante {
+        position: absolute;
+        background: linear-gradient(to bottom, var(--color), #000);
+        transform-origin: center;
+      }
+
+      /* Top-Kante */
+      .kante.top {
+        width: 100%;
+        height: 10px; /* Materialstärke */
+        top: -10px;
+        transform: rotateX(90deg);
+        border-top-left-radius: var(--border-radius);
+        border-top-right-radius: var(--border-radius);
+      }
+
+      /* Right-Kante */
+      .kante.right {
+        width: 10px;
+        height: 100%;
+        right: -10px;
+        transform: rotateY(90deg);
+        border-top-right-radius: var(--border-radius);
+        border-bottom-right-radius: var(--border-radius);
+      }
+
+      /* Bottom-Kante */
+      .kante.bottom {
+        width: 100%;
+        height: 10px;
+        bottom: -10px;
+        transform: rotateX(90deg);
+        border-bottom-left-radius: var(--border-radius);
+        border-bottom-right-radius: var(--border-radius);
+      }
+
+      /* Left-Kante */
+      .kante.left {
+        width: 10px;
+        height: 100%;
+        left: -10px;
+        transform: rotateY(90deg);
+        border-top-left-radius: var(--border-radius);
+        border-bottom-left-radius: var(--border-radius);
+      }
+
+      /* Hover-Effekt */
+      .platte:hover {
+        transform: rotateX(calc(var(--rotateX, 0deg) + 20deg))
+          rotateY(calc(var(--rotateY, 0deg) + 15deg));
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      id="platte1"
+      class="platte"
+      data-rotate-x="30"
+      data-rotate-y="45"
+      data-color="#4caf50"
+    >
+      <div class="vorderseite"></div>
+      <div class="kante top"></div>
+      <div class="kante right"></div>
+      <div class="kante bottom"></div>
+      <div class="kante left"></div>
+    </div>
+
+    <div
+      id="platte2"
+      class="platte"
+      data-rotate-x="20"
+      data-rotate-y="60"
+      data-color="#ff5722"
+    >
+      <div class="vorderseite"></div>
+      <div class="kante top"></div>
+      <div class="kante right"></div>
+      <div class="kante bottom"></div>
+      <div class="kante left"></div>
+    </div>
+
+    <script>
+      let stylesheet = document.querySelector("#dynamic-styles");
+      if (!stylesheet) {
+        stylesheet = document.createElement("style");
+        stylesheet.id = "dynamic-styles";
+        document.head.appendChild(stylesheet);
+      }
+
+      document.querySelectorAll(".platte").forEach((platte) => {
+        const rotateX = platte.getAttribute("data-rotate-x") || "0";
+        const rotateY = platte.getAttribute("data-rotate-y") || "0";
+        const color = platte.getAttribute("data-color") || "#4caf50";
+        const id = platte.id; // ID der Platte
+
+        stylesheet.sheet.insertRule(
+          `
+    #${id} {
+      --rotateX: ${rotateX}deg;
+      --rotateY: ${rotateY}deg;
+      --color: ${color};
+      --border-radius: 15px; /* Optional: Individuelle Anpassung pro Platte */
+    }
+  `,
+          stylesheet.sheet.cssRules.length
+        );
+      });
+    </script>
+  </body>
+</html>
