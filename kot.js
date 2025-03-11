@@ -1,35 +1,34 @@
 // Funktion, um die Mutation auszuführen, ohne Apollo Client
-async function graphGL(apiUrl, name, email, message) {
+function graphGL(apiUrl, name, email, message) {
   const query = `
-      mutation Contactus {
-        contactus(name: \"${name}\", email: \"${email}\", message: \"${message}\") {
-          status
-          ResponseCode
-          affectedRows
-        }
+    mutation Contactus {
+      contactus(name: "${name}", email: "${email}", message: "${message}") {
+        status
+        ResponseCode
+        affectedRows
       }
-    `;
-
-  try {
-    await fetch(apiUrl, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ query }),
-    });
-
-    const result = await response.json();
-
-    if (result.data.contactus.status === "success") {
-      console.log("Form successfully submitted:", result.data.contactus);
-      return true;
-    } else {
-      throw new Error("Error submitting the form: " + result.data.contactus.ResponseCode);
     }
-  } catch (error) {
-    console.error("Network or server error:", error);
-  }
+  `;
+
+  return fetch(apiUrl, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ query }),
+  })
+    .then((response) => response.json())
+    .then((result) => {
+      if (result.data.contactus.status === "success") {
+        console.log("Form successfully submitted:", result.data.contactus);
+        return true;
+      } else {
+        throw new Error("Error submitting the form: " + result.data.contactus.ResponseCode);
+      }
+    })
+    .catch((error) => {
+      console.error("Network or server error:", error);
+    });
 }
 
 // Funktion zur Validierung des Namens
@@ -122,10 +121,11 @@ async function submitContactForm() {
         nameInput.value = "";
         emailInput.value = "";
         messageInput.value = "";
+        alert("We have received your message, thank you very much for your feedback, and wishing you much success with Peernetwork.");
       }
     } catch (error) {
       console.error("Error submitting form:", error);
-      errorDisplay.innerHTML = "An error occurred while submitting the form.";
+      alert("An error occurred while submitting the form. Please try again later.");
     }
   }
 }

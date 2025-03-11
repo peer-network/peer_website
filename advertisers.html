@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" href="css/index.css" as="style" />
     <link rel="stylesheet" href="css/index.css" />
     <link rel="preload" fetchpriority="high" as="image" href="img/boost.webp" type="image/webp" />
     <meta name="description" content="Peer is a blockchain-based social network. The blockchain technology protects users’ privacy and allows them to monetize their own data in a controlled manner." />
@@ -27,7 +28,6 @@
     <link rel="icon" fetchpriority="low" type="image/svg+xml" href="svg/logo_farbe.svg" />
     <link rel="apple-touch-icon" href="img/apple.png" fetchpriority="low" />
     <meta name="theme-color" content="#00beff" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <script type="application/ld+json">
       {
         "@context": "http://schema.org",
@@ -145,36 +145,27 @@
       </div>
     </header>
     <main>
-      <h1 class="boost-text" data-scroll>Boost your sales</h1>
-      <div class="withPeer flex vert hor full" data-scroll>
-          with&nbsp;
-          <img src="svg/logo_farbe.svg" alt="Peernetwork" width="50" height="50" />
-          &nbsp;peer
+      <h1>Boost your sales</h1>
+      <div class="withPeer flex vert hor full">
+        with&nbsp;
+        <img src="svg/logo_farbe.svg" alt="Peernetwork" width="50" height="50" />
+        &nbsp;peer
       </div>
-      <div class="boost" data-scroll>
-          <img src="img/boost.webp"  class="boostImage" width="1892" height="704" loading="eager" />
+      <div class="monetise">
+        <img src="img/boost.webp" alt="" width="1892" height="704" />
       </div>
-      <div class="spacer"></div>
-      <script src="scripts/boostscript.js"></script>
-      <div class="spacer"></div>
       <section class="howItsWork">
         <div class="howHaeder">
-          <div class="spacer"></div>
           <h2>How it works?</h2>
           <span>We will find right auditory for your products</span>
         </div>
         <div class="howItsWorkImg">
           <img src="img/howitworks2.webp" alt="" width="2460" height="1270" loading="lazy" />
-          <script src="scripts/howitsworkscript.js"></script>
         </div>
       </section>
-      <section class="carousel-container">
-        <div class="carousel-wrapper">
-        <div class="carousel" id="carousel">
-          <img src="img/combined_brands.webp" alt="brand">
-        </div>
-        </div>
-    </section>
+      <section class="clients">
+        <img src="img/clients.webp" alt="" width="2147" height="682" loading="lazy" />
+      </section>
       <section class="shop">
         <img src="img/shop.webp" alt="" width="1720" height="281" loading="lazy" />
       </section>
