@@ -438,6 +438,9 @@ button {
 .webApp::after {
   background-color: #ed880e !important;
 }
+.event {
+  position: relative;
+}
 .event > img {
   margin-left: 5vw;
   margin-top: 1rem;
@@ -446,6 +449,36 @@ button {
   /* aspect-ratio: 1720/739; */
   background-repeat: no-repeat;
   background-size: contain;
+  border-radius: 2rem;
+}
+.event > img:nth-of-type(2) {
+  position: absolute;
+  top: 37%;
+  left: -4rem;
+  animation: tilt 5s ease-in-out infinite;
+  transform-origin: center;
+  width: 11rem;
+}
+.event > img:nth-of-type(3) {
+  position: absolute;
+  top: 50%;
+  right: -3rem;
+  animation: tilt 5s ease-in-out infinite;
+  animation-delay: 0s;
+  animation-delay: 1s;
+  transform-origin: center;
+  width: 18rem;
+}
+@keyframes tilt {
+  0% {
+    transform: rotateZ(-10deg);
+  }
+  50% {
+    transform: rotateZ(10deg);
+  }
+  100% {
+    transform: rotateZ(-10deg);
+  }
 }
 .evolution {
   position: relative;
