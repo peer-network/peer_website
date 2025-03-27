@@ -138,3 +138,19 @@ submitButton.addEventListener("click", (event) => {
 nameInput.addEventListener("input", validateInputs);
 emailInput.addEventListener("input", validateInputs);
 messageInput.addEventListener("input", validateInputs);
+
+
+// Adding Event Listener for the Mobile Menu
+
+const mobileMenu = document.querySelector(".mobile-menu");
+const mobileList = document.querySelector(".mobile-list");
+
+mobileMenu.addEventListener("click", () => {
+  mobileMenu.classList.toggle("active");
+  mobileList.classList.toggle("active");
+})
+
+document.querySelectorAll("#mobile").forEach(n => n.addEventListener("click", () => {
+  mobileMenu.classList.remove("active");
+  mobileList.classList.remove("active");
+}))
