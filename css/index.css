@@ -246,7 +246,7 @@ a {
     
   .contact-section textarea {
     resize: vertical;
-    min-height: 100px;
+    min-height: 15rem;
   }
     
   .contact-section button {
@@ -290,6 +290,9 @@ a {
     font-size: 1.5rem;
     padding: 0.5rem 0 1rem 0;
   }
+  hr {
+    display: none;
+  } 
     
   .footer-links {
     justify-content: space-between;
@@ -479,7 +482,7 @@ a {
     
   .contact-section textarea {
     resize: vertical;
-    min-height: 100px;
+    min-height: 15rem;
   }
     
   .contact-section button {
@@ -522,6 +525,9 @@ a {
   .business-hours h3 {
     font-size: 1.7rem;
     padding: 0.5rem 0 1rem 0;
+  }
+  hr {
+    display: none;
   }
     
   .footer-links {
@@ -590,12 +596,14 @@ a {
     width: 100%;
   }
   header {
-    padding: 2rem 8rem;
+    align-items: center;
+    padding: 2rem 4rem;
     position: fixed;
     width: 100%;
   }
   main {
-    padding: 8rem;
+    align-items: center;
+    padding: 4rem;
     margin-top: 10rem;
   }
   .nav-bar {
@@ -622,43 +630,87 @@ a {
     flex-direction: column;
   }
   footer {
-    background-color: #252525; /* Dark grey background */
+    align-items: center;
+    padding: 4rem;
+    background-color: #252525; 
     color: #fff;
-    padding: 8rem;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: space-between;
+    justify-content: space-around;
   }
-  
   .contact-info {
+    padding: 0;
     display: flex;
     flex-direction: row;
-    justify-content: space-between; /* Space between left and right sections */
+    gap: 5rem;
     align-items: center;
   }
-  
   .contact-section,
   .contact-details {
-    width: 50%; /* Each section takes up half the width */
+    width: 100%;
+    margin-bottom: 20px;
   }
   
-  .contact-details {
-    background-color: #007bff;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end; /* Align content to the right */
+  .contact-section h2 {
+    margin-bottom: 20px;
   }
   
   .contact-section input,
   .contact-section textarea {
     width: 100%;
-    padding: 1.5rem;
-    margin-bottom: 1rem;
+    padding: 1.8rem;
+    margin-bottom: 1.2rem;
     border-radius: 1rem;
     border: none;
     background-color: #fff;
+    color: #333;
+  }
+  
+  .contact-section textarea {
+    resize: vertical;
+    min-height: 15rem;
+  }
+  
+  .contact-section button {
+    width: 100%;
+    background-color: #007bff; /* Blue button */
+    color: #fff;
+    padding: 2rem;
+    border: none;
+    border-radius: 2.5rem;
+    cursor: pointer;
+  }
+  .contact-details {
+    width: 70%;
+    padding: 0;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .contact-info img {
+    width: 2rem;
+  }
+  .contact-info span {
+    font-size: 1.5rem;
+    
+  }
+  .contacts {
+    gap: 0.7rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .contacts a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .business {
+    display: flex;
+    align-items: center;
+  }
+  .business-hours h3 {
+    font-size: 1.5rem;
   }
   
   input::placeholder,
@@ -666,45 +718,56 @@ a {
     color: #5aa6ff;
   }
   
-  .contact-section textarea {
-    resize: vertical;
-    min-height: 100px;
-  }
-  
-  .contact-section button {
-    background-color: #007bff; /* Blue button */
-    color: #fff;
-    padding: 1.5rem;
-    border: none;
-    border-radius: 2.5rem;
-    cursor: pointer;
+  hr {
+    border-color: rgba(128, 128, 128, 1);
+    margin-top: 5rem;
     width: 100%;
   }
-  
-  .contact-details img {
-    width: 2rem;
-  }
-  
-  .contact-details span {
-    font-size: 1.4rem;
-  }
-  
-  .contact-details a {
+  .footer-links {
     display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  .footer-links ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer-links a {
+    font-size: 1.6rem;
     color: #fff;
     text-decoration: none;
-    padding: 0.5rem 0;
-    gap: 0.5rem; /* Space between icon and text */
+    margin: 0 2rem;
+  }
+  .footer-links img {
+    width: 12rem;
+  }
+  .footer-links .active {
+    color: #00BEFF;
+  }
+  .social-icons a{
+    margin: 1rem;
   }
   
-  .business {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem; /* Space between clock icon and text */
+  .social-icons img {
+    width: 3rem;
   }
   
-  .business-hours h3 {
+  .copyright {
+    color: rgba(128, 128, 128, 1);
+    width: 100%;
+    text-align: center;
     font-size: 1.5rem;
+  }
+  
+  .logo {
+    align-self: flex-end;
+  }
+  .logo img {
+    width: 11rem;
   }
 }
 
@@ -728,12 +791,14 @@ a {
     width: 100%;
   }
   header {
+    align-items: center;
     position: fixed;
     justify-content: center;
     width: 100%;
     padding: 2rem 4rem;
   }
   main {
+    align-items: center;
     padding: 4rem;
     margin-top: 10rem;
   }
@@ -792,18 +857,24 @@ a {
 
 
   footer {
+    align-items: center;
     padding: 4rem;
     background-color: #252525; 
     color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+  }
+  .contact-info {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
     align-items: center;
   }
-  
   .contact-section,
   .contact-details {
-    width: 50%;
+    width: 100%;
     margin-bottom: 20px;
   }
   
@@ -814,9 +885,9 @@ a {
   .contact-section input,
   .contact-section textarea {
     width: 100%;
-    padding: 12px;
-    margin-bottom: 10px;
-    border-radius: 5px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 1rem;
     border: none;
     background-color: #fff;
     color: #333;
@@ -824,7 +895,7 @@ a {
   
   .contact-section textarea {
     resize: vertical;
-    min-height: 100px;
+    min-height: 15rem;
   }
   
   .contact-section button {
@@ -836,63 +907,99 @@ a {
     border-radius: 2.5rem;
     cursor: pointer;
   }
-  
-  .contact-details p {
-    margin-bottom: 10px;
+  .contact-details {
+    width: 80%;
+    padding: 0;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
   }
-  
-  .contact-details i {
-    margin-right: 5px;
-    color: #007bff;
+  .contact-info img {
+    width: 2rem;
   }
-  
-  .contact-details a {
-    color: #fff;
-    text-decoration: none;
+  .contact-info span {
+    font-size: 1.8rem;
   }
-  
+  input::placeholder,
+  textarea::placeholder {
+    color: #5aa6ff;
+  }
+  .contacts {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .contacts a {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  .business {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  .business-hours{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
   .business-hours h3 {
-    margin-top: 10px;
+    font-size: 2rem;
   }
-  
-  .footer-links {
+  hr {
+    border-color: rgba(128, 128, 128, 1);
+    margin-top: 5rem;
     width: 100%;
-    text-align: center;
-    margin-bottom: 10px;
   }
-  
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  .footer-links ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
   .footer-links a {
+    font-size: 1.8rem;
     color: #fff;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 2rem;
+  }
+  .footer-links img {
+    width: 15rem;
+  }
+  .footer-links .active {
+    color: #00BEFF;
+  }
+  .social-icons a{
+    margin: 1rem;
   }
   
-  .social-icons {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 10px;
-  }
-  
-  .social-icons a {
-    color: #fff;
-    margin: 0 10px;
-    font-size: 20px;
+  .social-icons img {
+    width: 3.5rem;
   }
   
   .copyright {
+    color: rgba(128, 128, 128, 1);
     width: 100%;
     text-align: center;
-    font-size: 0.8em;
+    font-size: 1.5rem;
   }
   
   .logo {
-    width: 100%;
-    text-align: center;
-    font-size: 1.2em;
+    align-self: flex-end;
+  }
+  .logo img {
+    width: 13rem;
   }
   
-
-
 }
 
 
@@ -911,20 +1018,23 @@ a {
     width: 100%;
   }
   header {
+    align-items: center;
     position: fixed;
     justify-content: center;
     width: 100%;
-    padding: 2rem 8rem;
+    padding: 2rem 4rem;
   }
   main {
-    padding: 8rem;
+    align-items: center;
+    padding: 4rem;
     margin-top: 12rem;
   }
   .nav-bar {
     background-color: rgba(119, 175, 255, 0.05);
-    width: 100%; 
     padding: 0 3rem;
     border-radius: 2.5rem;
+    width: 100%;
+    max-width: 130rem;
     display: flex;
     justify-content: space-between;
     align-items: center; 
@@ -975,34 +1085,39 @@ a {
 
 
   footer {
-    background-color: #0a192f; /* Dark blue background */
-    padding: 8rem;
+    padding: 4rem;
+    align-items: center;
+    background-color: #252525; 
     color: #fff;
-    padding: 20px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: space-around;
-    align-items: flex-start;
-    font-family: sans-serif;
   }
-  
+  .contact-info {
+    max-width: 130rem;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 8rem;
+    align-items: center;
+  }
   .contact-section,
   .contact-details {
-    width: 45%;
+    width: 100%;
     margin-bottom: 20px;
   }
   
-  .contact-section h2,
-  .contact-details h2 {
+  .contact-section h2 {
     margin-bottom: 20px;
   }
   
   .contact-section input,
   .contact-section textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 1rem;
     border: none;
     background-color: #fff;
     color: #333;
@@ -1010,72 +1125,114 @@ a {
   
   .contact-section textarea {
     resize: vertical;
-    min-height: 100px;
+    min-height: 15rem;
   }
   
   .contact-section button {
+    width: 100%;
     background-color: #007bff; /* Blue button */
     color: #fff;
-    padding: 10px 20px;
+    padding: 2rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 2.5rem;
     cursor: pointer;
   }
-  
-  .contact-details p {
-    margin-bottom: 10px;
+  .contact-details {
+    width: 80%;
+    padding: 0;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
   }
-  
-  .contact-details i {
-    margin-right: 5px;
-    color: #007bff;
+  .contact-info img {
+    width: 2.5rem;
   }
-  
-  .contact-details a {
-    color: #fff;
-    text-decoration: none;
+  .contact-info span {
+    font-size: 1.8rem;
   }
-  
+  input::placeholder,
+  textarea::placeholder {
+    color: #5aa6ff;
+  }
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .contacts a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .business-hours{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .business {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
   .business-hours h3 {
-    margin-top: 10px;
+    font-size: 2rem;
   }
   
-  .footer-links {
+  hr {
+    border-color: rgba(128, 128, 128, 1);
+    margin-top: 5rem;
     width: 100%;
-    text-align: center;
-    margin-bottom: 10px;
+    max-width: 130rem;
   }
-  
+  .footer-links {
+    max-width: 130rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  .footer-links ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
   .footer-links a {
+    font-size: 2rem;
     color: #fff;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 2rem;
+  }
+  .footer-links img {
+    width: 15rem;
+  }
+  .footer-links .active {
+    color: #00BEFF;
+  }
+  .social-icons a{
+    margin: 1rem;
   }
   
-  .social-icons {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 10px;
-  }
-  
-  .social-icons a {
-    color: #fff;
-    margin: 0 10px;
-    font-size: 20px;
+  .social-icons img {
+    width: 4rem;
   }
   
   .copyright {
+    color: rgba(128, 128, 128, 1);
     width: 100%;
     text-align: center;
-    font-size: 0.8em;
+    font-size: 1.7rem;
+    margin-top: 1rem;
   }
   
   .logo {
-    width: 100%;
-    text-align: center;
-    font-size: 1.2em;
+    align-self: flex-end;
   }
-  
+  .logo img {
+    width: 15rem;
+  }
 
 
 }
