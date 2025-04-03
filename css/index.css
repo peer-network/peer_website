@@ -109,18 +109,26 @@ a {
 }
 
 @media only screen and (max-width: 450px) {
+  
   h1{
     font-size: 4rem;
     width: 100%;
   }
   h2{
     font-size: 3.5rem;
+    width: 100%;
+  }
+  h3 {
+    font-size: 2rem;
+    width: 100%;
   }
   p {
-    margin-top: 2rem;
     font-size: 1.4rem;
     letter-spacing: 0.2rem;
     width: 100%;
+  }
+  body {
+    min-width: 450px;
   }
   header {
     padding: 2rem 3rem;
@@ -181,21 +189,274 @@ a {
     margin-top: 1rem;
     height: 100vh;
   }
+
+
+  .container1 {
+    display: flex;
+    flex-direction: column;
+  }
   .hero {
     flex-direction: column;
   }
   .hero img {
-    width: 30%;
+    width: 40%;
     align-self: center;
     padding: 2rem 0;
   }
   .buttons {
     flex-direction: column;
   }
+
+
+  .container2 {
+    margin-top: 2rem;
+    background-image: url('../img/VS.png');
+    background-repeat: no-repeat;
+    background-position: 50% 76%;
+  }
+  .content-frame {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .peer-network {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 2rem;
+  }
+  .p {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .others {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+  .o {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .circle1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .circle2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .circle3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .small-circle {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    border-radius: 50%;
+   width: 8.7rem;
+   height: 8.7rem;
+  }
+  .small-circle p {
+    font-size: 2.4rem;
+  }
+  .big-circle p {
+    font-size: 2.4rem;
+  }
+  .big-circle {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 13.6rem;
+    height: 13.6rem;
+  }
+  .peer-network .big-circle,
+  .peer-network .small-circle {
+    background-color: #FCBB32;
+    box-shadow: 0px 0px 20px rgba(252, 187, 50, 1);
+  }
+  .others .big-circle,
+  .others .small-circle {
+    background-color: #0047AD;
+    box-shadow: -6px 4px 15px rgba(18, 126, 252, 1);
+  }
+
+
+
+  .container3 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+  .values {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .value-item {
+    text-align: center;
+    display: flex;
+    border-radius: 2.5rem;
+    margin-bottom: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 22.7rem;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(139,139,139,1) 0%, rgba(107,107,107,1) 0%, rgba(66,66,66,1) 0%, rgba(37,37,37,1) 100%);
+  }
+  .value-item p {
+    margin-top: 2rem;
+  }
+
+
+
+  .container4 {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .steps-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  .peer1 {
+    width: 70%;
+  }
+  .peer1 h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+  .peer1 p {
+    font-size: 1.2rem;
+  }
+  
+  .step-box1,
+  .step-box2,
+  .step-box3,
+  .step-box4 {
+    width: 100%;
+    height: 15rem;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    border-radius: 2.5rem;
+  }
+  .step-box1 {
+    background: 
+      url('../img/post.png') no-repeat 220px -17px , 
+      url('../img/1.png') no-repeat 350px 110px ,
+      #393939;
+    background-size: 50%, 7%;
+  }
+  .step-box2 {
+    background: 
+      url('../img/earn.png') no-repeat 230px -40px , 
+      url('../img/2.png') no-repeat 350px 110px ,
+      #393939;
+    background-size: 50%, 7%;
+  }
+  .step-box3 {
+    background: 
+      url('../img/convert.png') no-repeat 240px -40px , 
+      url('../img/3.png') no-repeat 350px 110px ,
+      #393939;
+    background-size: 50%, 7%;
+  }
+  .step-box4 {
+    background: 
+      url('../img/cash.png') no-repeat 260px -25px , 
+      url('../img/4.png') no-repeat 350px 110px ,
+      #393939;
+    background-size: 40%, 7%;
+  }
+  .peertoken {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .step-image {
+    width: 70%;
+  }
+  .container5 {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+
+
+
+  .container5 img {
+    width: 100%;
+  }
+  .register img {
+    width: 3rem;
+    height: 3rem;
+  }
+  .register {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 2.5rem;
+    background-color: #127EFC;
+  }
+  .register span {
+    font-size: 1.5rem;
+  }
+
+
+
+  .container6 {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .roadmap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .roadmap img {
+    width: 10rem;
+    height: 47rem;
+  }
+  .r {
+    margin-bottom: 1.2rem;
+  }
+  .r span {
+    color: rgba(128, 128, 128, 1);
+  }
   footer {
     background-color: #252525; /* Dark grey background */
     color: #fff;
-    padding: 3rem;
+    padding: 0 3rem;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -383,7 +644,7 @@ a {
   .mobile-menu {
     display: block;
     cursor: pointer;
-    margin-left: 25rem;
+    margin-left: 20rem;
   }
   .trigger {
     background-color: #fff;
@@ -1034,7 +1295,7 @@ a {
     padding: 0 3rem;
     border-radius: 2.5rem;
     width: 100%;
-    max-width: 130rem;
+    max-width: 150rem;
     display: flex;
     justify-content: space-between;
     align-items: center; 
@@ -1094,7 +1355,7 @@ a {
     justify-content: space-around;
   }
   .contact-info {
-    max-width: 130rem;
+    max-width: 150rem;
     width: 100%;
     padding: 0;
     display: flex;
@@ -1186,7 +1447,7 @@ a {
     max-width: 130rem;
   }
   .footer-links {
-    max-width: 130rem;
+    max-width: 150rem;
     width: 100%;
     display: flex;
     flex-direction: column;
