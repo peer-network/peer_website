@@ -626,7 +626,6 @@ a {
     width: 100%;
   }
   p {
-    margin-top: 1rem;
     font-size: 1.6rem;
     letter-spacing: 0.2rem;
     width: 100%;
@@ -710,34 +709,13 @@ a {
     flex-wrap: wrap;
   }
   .btn-apple ,
-  .btn-android {
-    background-color: #fff;
-    border-radius: 2.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 45%;
-    min-width: 30rem;
-  }
+  .btn-android ,
   .btn-webapp {
-    background-color: #127EFC;
-    border-radius: 2.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 45%;
     min-width: 30rem;
   }
-  .btn-webapp span{
-    font-size: 1.5rem;
-    margin-right: 0.4rem;
-  }
-  .btn-apple span,
-  .btn-android span {
-    color: #127EFC;
-    font-size: 1.5rem;
-    margin-right: 0.8rem;
-  }
+  
+
 
   .container2 {
     margin-top: 2rem;
@@ -979,9 +957,10 @@ a {
   .roadmap img {
     width: 10rem;
     height: 60rem;
+    max-height: 55rem;
   }
   .r {
-    margin-bottom: 1.2rem;
+    margin-bottom: 2vw;
   }
   .r span {
     color: rgba(128, 128, 128, 1);
@@ -1146,6 +1125,10 @@ a {
   h2{
     font-size: 4.5rem;
   }
+  h3 {
+    font-size: 2.5rem;
+    width: 100%;
+  }
   p {
     margin-top: 2rem;
     font-size: 1.8rem;
@@ -1175,16 +1158,7 @@ a {
   .mobile-list {
     display: none;
   }
-  .hero {
-    flex-direction: column;
-  }
-  .hero img {
-    width: 10%;
-  }
-  .buttons {
-    flex-direction: column;
-  }
-
+  
 
   .container1 {
     display: flex;
@@ -1194,23 +1168,32 @@ a {
     flex-direction: column;
   }
   .hero img {
-    width: 40%;
+    width: 30%;
     align-self: center;
     padding: 2rem 0;
   }
   .buttons {
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-self: center;
-    width: 80%;
+    width: 100%;
+    gap: 1rem;
+  }
+  .btn-apple ,
+  .btn-android ,
+  .btn-webapp {
+    width: 45%;
   }
   
+
+
 
   .container2 {
     margin-top: 2rem;
     background-image: url('../img/VS.png');
     background-repeat: no-repeat;
-    background-position: 50% 76%;
+    background-position: 50% 73%;
+    background-size: 25%;
   }
   .content-frame {
     margin-top: 2rem;
@@ -1222,7 +1205,7 @@ a {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
+    gap: 5vw;
     margin-bottom: 2rem;
   }
   .p {
@@ -1236,7 +1219,7 @@ a {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
+    gap: 5vw;
   }
   .o {
     display: flex;
@@ -1267,22 +1250,25 @@ a {
     text-align: center;
     align-items: center;
     border-radius: 50%;
-   width: 8.7rem;
-   height: 8.7rem;
+    width: 12vw;
+    height: 12vw;
   }
   .small-circle p {
-    font-size: 2.4rem;
+    font-size: 4vw;
   }
   .big-circle p {
-    font-size: 2.4rem;
+    font-size: 5vw;
   }
   .big-circle {
     display: flex;
     text-align: center;
     align-items: center;
     border-radius: 50%;
-    width: 13.6rem;
-    height: 13.6rem;
+    width: 19vw;
+    height: 19vw;
+  }
+  .content-frame span {
+    font-size: 1.5vw;
   }
   .peer-network .big-circle,
   .peer-network .small-circle {
@@ -1451,8 +1437,8 @@ a {
     align-items: center;
   }
   .roadmap img {
-    width: 10rem;
-    height: 47rem;
+    width: 10vw;
+    height: 70vw;
   }
   .r {
     margin-bottom: 1.2rem;
@@ -1567,7 +1553,7 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    gap: 3rem;
+    gap: 4rem;
   }
   .footer-links a {
     font-size: 1.6rem;
