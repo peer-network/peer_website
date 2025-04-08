@@ -2223,9 +2223,8 @@ a {
   }
   main {
     align-items: center;
-    justify-self: center;
     padding: 4rem;
-    margin-top: 12rem;
+    margin: auto;
     width: 100%;
     max-width: 160rem;
   }
@@ -2276,6 +2275,7 @@ a {
     display: flex;
     flex-direction: column; 
     justify-content: center;
+    margin-top: 10rem;
   }
   .hero {
     flex-direction: row;
@@ -2611,15 +2611,14 @@ a {
 
   footer {
     width: 100%;
-    max-width: 165rem;
-    justify-self: center;
+    margin: auto;
+    max-width: 160rem;
     padding: 4rem;
     align-items: center;
     background-color: #252525; 
     color: #fff;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
   }
   .contact-info {
     width: 100%;
