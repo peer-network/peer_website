@@ -1227,6 +1227,43 @@ a {
     width: 11rem;
   }
 
+  /* CSS FOR ADVERTISERS PAGE */
+
+  .adSteps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: 2rem;
+  }
+
+  .adStep-box1,
+  .adStep-box2,
+  .adStep-box3 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 25rem;
+    background-color: #393939;
+    border-radius: 2.5rem;
+    overflow: hidden;
+  }
+  .adSteps img {
+    width: 46%;
+  }
+
+  .adSteps .peer1 {
+    width: 100%;
+    padding: 2rem;
+  }
+  .adContainer{
+    margin-top: 4rem;
+  }
+
+
 
 }
 
