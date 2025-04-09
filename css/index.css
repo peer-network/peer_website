@@ -678,6 +678,48 @@ a {
     width: 8rem;
   }
 
+
+  /* CSS FOR ADVERTISERS PAGE */
+
+  .adSteps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 4rem;
+  }
+
+  .adSteps .step-box1,
+  .adSteps .step-box2,
+  .adSteps .step-box3 {
+    width: 100%;
+    max-width: 90%;
+    height: 28rem;
+  }
+
+  .adSteps .step-box1 {
+    background: 
+      url('../img/High E.webp') no-repeat 50% -25px , 
+      #393939;
+    background-size: 32%;
+  }
+  .adSteps .step-box2 {
+    background: 
+      url('../img/Money returns.webp') no-repeat 50% -20px , 
+      #393939;
+    background-size: 32%;
+  }
+  .adSteps .step-box3 {
+    background: 
+      url('../img/Specified T.webp') no-repeat 50% 150px , 
+      #393939;
+    background-size: 35%;
+  }
+  .adSteps .peer1{
+    width: 100%;
+  }
+
 }
 
 
@@ -2252,6 +2294,12 @@ a {
   .logo img {
     width: 13rem;
   }
+
+
+  /* CSS FOR ADVERTISERS PAGE */
+
+  
+
   
 }
 
@@ -2832,38 +2880,27 @@ a {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 3rem;
+    gap: 4rem;
     margin-top: 4rem;
   }
 
-  .adSteps .step-box1,
-  .adSteps .step-box2,
-  .adSteps .step-box3 {
+  .adStep-box1,
+  .adStep-box2,
+  .adStep-box3 {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
     width: 100%;
     max-width: 90%;
     height: 22rem;
+    background-color: #393939;
+    border-radius: 2.5rem;
+    overflow: hidden;
   }
-
-  .adSteps .step-box1 {
-    background: 
-      url('../img/High E.webp') no-repeat 90% -25px , 
-      #393939;
-    background-size: 32%;
+  .adSteps img {
+    width: 30%;
   }
-  .adSteps .step-box2 {
-    background: 
-      url('../img/Money returns.webp') no-repeat 90% -20px , 
-      #393939;
-    background-size: 32%;
-  }
-  .adSteps .step-box3 {
-    background: 
-      url('../img/Specified T.webp') no-repeat 90% -3px , 
-      #393939;
-    background-size: 35%;
-  }
-  .adSteps .peer1{
-    width: 50%;
-  }
+  
 
 }
