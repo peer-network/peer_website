@@ -1783,9 +1783,11 @@ a {
   .adSteps img {
     width: 50%;
   }
-  .peer1{
+  .adSteps .peer1{
     padding: 2rem;
   }
+
+ 
 
   .adContainer{
     margin-top: 6rem;
@@ -2383,7 +2385,7 @@ a {
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
-    max-width: 90%;
+
     height: 22rem;
     background-color: #393939;
     border-radius: 2.5rem;
@@ -2392,7 +2394,7 @@ a {
   .adSteps img {
     width: 40%;
   }
-  .peer1{
+  .adSteps .peer1{
     padding: 2rem;
   }
 
