@@ -732,6 +732,7 @@ a {
     font-size: 1.6rem;
     letter-spacing: 0.2rem;
     width: 100%;
+    margin-top: 2rem;
   }
   header {
     padding: 2rem 3rem;
@@ -1496,7 +1497,7 @@ a {
     width: 60%;
   }
   .peer1 h3 {
-    font-size: 1.6rem;
+    font-size: 2rem;
     
   }
   .peer1 p {
@@ -1816,6 +1817,7 @@ a {
     font-size: 1.8rem;
     letter-spacing: 0.2rem;
     width: 100%;
+    margin-top: 2rem;
   }
   header {
     align-items: center;
