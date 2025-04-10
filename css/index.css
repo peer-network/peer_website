@@ -732,6 +732,7 @@ a {
     font-size: 1.6rem;
     letter-spacing: 0.2rem;
     width: 100%;
+    margin-top: 2rem;
   }
   header {
     padding: 2rem 3rem;
@@ -1496,7 +1497,7 @@ a {
     width: 60%;
   }
   .peer1 h3 {
-    font-size: 1.6rem;
+    font-size: 2rem;
     
   }
   .peer1 p {
@@ -1816,6 +1817,7 @@ a {
     font-size: 1.8rem;
     letter-spacing: 0.2rem;
     width: 100%;
+    margin-top: 2rem;
   }
   header {
     align-items: center;
@@ -2538,6 +2540,7 @@ a {
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 18%;
+    margin-top: 8rem;
   }
   .content-frame {
     margin-top: 3rem;
@@ -3008,4 +3011,79 @@ a {
     margin-top: 8rem;
   }
 
+
+
+
+  /* CSS FOR PEERAPP PAGE */
+
+
+
+
+
+
+
+
+
+  /* CSS FOR ABOUT US PAGE */
+
+
+
+
+
+
+
+
+  /* CSS FOR IMPRESSUM PAGE */
+
+  .company-information {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    margin-top: 2rem;
+  }
+  
+  .info-block {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1.5rem;
+  }
+  
+  .info-block h3,
+  .info-block p {
+    font-size: 1.8rem;
+    margin: 0;
+    padding: 0.5rem 1rem;
+    width: -webkit-fill-available;
+  }
+  .info-block h3 {
+    width: 50%;
+  }
+  .information {
+    margin-top: 8rem;
+  }
+  .Impressum, 
+  .information,
+  .Liability, 
+  .User-Generated, 
+  .Hosting, 
+  .Online-Dispute{
+    width: 100%;
+    padding: 3rem;
+    border-radius: 2rem;
+    border: none;
+    background-color: #393939;
+    color: #fcfcfc;
+  }
+  .Online-Dispute a {
+    color: #fcfcfc;
+    text-decoration: none;
+    transition: color 0.3s ease, transform .3s ease, font-weight .3s ease;
+    display: inline-block;
+  }
+  
+  .Online-Dispute a:hover {
+    color: #00ADEF;
+    font-weight: bold;
+    transform: translateY(-2px);
+  }
 }
