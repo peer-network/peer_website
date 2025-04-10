@@ -1788,11 +1788,60 @@ a {
     padding: 2rem;
   }
 
- 
-
   .adContainer{
     margin-top: 6rem;
   }
+
+  /* CSS FOR IMPRESSUM PAGE */
+
+  .company-information {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    margin-top: 2rem;
+  }
+  
+  .info-block {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1.5rem;
+  }
+  
+  .info-block h3,
+  .info-block p {
+    font-size: 1.8rem;
+    margin: 0;
+    padding: 0.5rem 1rem;
+    width: -webkit-fill-available;
+  }
+  .info-block h3 {
+    width: 50%;
+  }
+  .information {
+    margin-top: 4rem;
+  }
+  .Impressum, 
+  .information,
+  .Liability, 
+  .User-Generated, 
+  .Hosting, 
+  .Online-Dispute{
+    width: 100%; 
+    color: #fcfcfc;
+  }
+  .Online-Dispute a {
+    color: #fcfcfc;
+    text-decoration: none;
+    transition: color 0.3s ease, transform .3s ease, font-weight .3s ease;
+    display: inline-block;
+  }
+  
+  .Online-Dispute a:hover {
+    color: #00ADEF;
+    font-weight: bold;
+    transform: translateY(-2px);
+  }
+
 
 }
 
@@ -2405,7 +2454,7 @@ a {
   }
 
    /* CSS FOR IMPRESSUM PAGE */
-   
+
   .company-information {
     display: flex;
     flex-direction: column;
