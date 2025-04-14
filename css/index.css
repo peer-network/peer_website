@@ -1608,9 +1608,13 @@ a {
   .peer1 h3 {
     font-size: 2rem;
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
 >>>>>>> f6d5d55 (feat(peerapp-page): the contents for peerapp page for screen size 1240px)
+=======
+    
+>>>>>>> b2d6248 (fix(merge-conflict): fix a small error in peer1 h3)
   }
   .peer1 p {
     font-size: 1.2rem;
