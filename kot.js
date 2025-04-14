@@ -154,3 +154,16 @@ document.querySelectorAll("#mobile").forEach(n => n.addEventListener("click", ()
   mobileMenu.classList.remove("active");
   mobileList.classList.remove("active");
 }))
+
+
+// Adding Event Listener for Q/A dropdown
+
+const questionButtons = document.querySelectorAll('.Q');
+
+document.querySelectorAll('.Q').forEach(questionButtons => {
+  questionButtons.addEventListener('click', () => {
+    questionButtons.classList.toggle('active');
+    const answer = questionButtons.nextElementSibling;
+    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+  });
+});
