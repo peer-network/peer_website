@@ -2354,9 +2354,6 @@ a {
   .creators{
     width: 100%;
   }
-
-
-
   .container5 {
     display: flex;
     flex-direction: column;
@@ -2383,8 +2380,6 @@ a {
   .register span {
     font-size: 2rem;
   }
-
-
   .container6 {
     display: flex;
     flex-direction: column;
@@ -2411,7 +2406,7 @@ a {
     flex-direction: row;
     gap: 3.5rem;
     justify-content: space-between;
-    padding: 0 5rem;
+    
     }
 
   footer {
@@ -2565,7 +2560,7 @@ a {
    .aboutsteps{
     display: flex;
     justify-content: center;
-    margin-top: 10rem;
+    margin-top: 8rem;
     gap: 5rem;
    }
     
@@ -2592,7 +2587,7 @@ a {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      }
+    }
     .revenue{
     width: 25%;
     display: flex;
@@ -2630,9 +2625,8 @@ a {
     font-size: 6rem;
   }
 
-  .vid{
-    width: 30%;
-    background-color: #393939;
+  .hero .vid{
+    width: 20%;
     border-radius: 2.5rem;
   }
 
@@ -2701,6 +2695,164 @@ a {
   }
 
   .adContainer{
+    margin-top: 6rem;
+  }
+
+
+  /* CSS FOR ABOUT US PAGE */
+
+  .aboutsteps{
+    display: flex;
+    justify-content: center;
+    margin-top: 8rem;
+    gap: 5rem;
+   }
+    
+    .aboutsteps-box1,
+    .aboutsteps-box2{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: #393939;
+    border-radius: 2.5rem;
+    justify-content: center;
+    padding: 4rem;
+    gap: 5rem;
+    
+    }
+    .about1 {
+    height: 50%;   
+    display: flex;
+    
+    justify-content: center;
+    }
+    .about2 {
+      height: 50%;   
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      }
+    .revenue{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    }
+    
+    .revenue .circle1{
+    background-color: rgb(252, 187, 50);
+    box-shadow: rgb(252, 187, 50) 0px 0px 20px;
+    justify-content: center;
+    border-radius: 50%;
+    width: 20rem;
+    height: 20rem;
+    }
+
+  .revenue .circle2{
+    background-color: #0047AD;
+    box-shadow: -6px 4px 15px rgba(18, 126, 252, 1);
+    justify-content: center;
+    border-radius: 50%;
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .revenue .r{
+    width: 100%;
+  }
+
+  .revenue .small-circle p {
+    font-size: 6rem;
+  }
+
+  .hero .vid{
+    width: 20%;
+    border-radius: 2.5rem;
+  }
+
+  .team1,
+  .team2{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .team12,
+  .team22,
+  .team23{
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    justify-content: center;
+  }
+  .team1 .big-circle,
+  .team22 .big-circle,
+  .team23 .big-circle{
+    overflow: hidden;             
+  }    
+
+  .team1 .big-circle img,
+  .team22 .big-circle img,
+  .team23 .big-circle img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   
+  }      
+
+  .btn-download img {
+    width: 3rem;
+  } 
+
+  .about1 img{
+    width: 40%;
+  }
+
+  .circle1 span{
+    font-size: 2rem;
+  }
+  .QandA1 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+  .QandA1 div {
+    width: 100%;
+    background-color: #393939;
+    padding: 1rem 2rem;
+    border-radius: 2.5rem;
+  }
+  .question {
+    cursor: pointer;
+    width: 100%;
+    font-size: 2rem;
+  }
+  
+  .answer {
+    display: none;
+    margin-top: 8px;
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+  }
+  .Q {
+    display: flex;
+    align-items: center;
+  }
+  .Q img {
+    width: 2rem;
+    cursor: pointer;
+    transition: 0;
+  }
+  .arrow {
+    transition: transform 0.3s ease;
+  }
+
+  .Q.active .arrow {
+    transform: rotate(180deg); 
+  }
+
+  .peerCon {
     margin-top: 6rem;
   }
 
