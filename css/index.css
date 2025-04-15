@@ -23,7 +23,6 @@ html {
 
 body {
   width: 100vw;
-  height: 100vh;
   overflow-x: hidden;
   background-color: #252525;
   margin: 0;
@@ -126,7 +125,9 @@ a {
 .container1 .peer-scan {
   animation-delay: 1.1s;
 }
-.buttons {
+.buttons,
+.peerapp-buttons,
+.peerapp-buttons2 {
   display: flex;
   transition: all 0.5s ease-in-out;
 }
@@ -193,15 +194,14 @@ a {
   h3 {
     font-size: 2rem;
     width: 100%;
+    margin-bottom: 1rem;
   }
   p {
     font-size: 1.4rem;
     letter-spacing: 0.2rem;
     width: 100%;
   }
-  body {
-    min-width: 450px;
-  }
+  
   header {
     padding: 2rem 3rem;
     width: 100%;
@@ -219,47 +219,64 @@ a {
   .nav-list {
     display: none;
   }
-  .mobile-list li {
-    font-size: 2.2rem;
-    padding: 0.5rem 3rem;
-  }
+  
   .mobile-menu {
     display: block;
     cursor: pointer;
+    width: 30px;
+    margin: 1rem;
+    z-index: 1001;
+    position: relative;
   }
+
   .trigger {
     background-color: #fff;
     display: block;
-    width: 25px;
+    width: 100%;
     height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
+    margin: 6px 0;
     transition: all 0.3s ease-in-out;
   }
-  .mobile-menu.active .trigger:nth-child(2){
+
+  .mobile-menu.active .trigger:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  .mobile-menu.active .trigger:nth-child(2) {
     opacity: 0;
   }
-  .mobile-menu.active .trigger:nth-child(1){
-    transform: translateY(8px) rotate(45deg);
+  .mobile-menu.active .trigger:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
   }
-  .mobile-menu.active .trigger:nth-child(3){
-    transform: translateY(-8px) rotate(-45deg);
-  }
+
   .mobile-list {
-    position: absolute;
-    left: -400%;
-    gap: 0;
-    flex-direction: column;
-    background-color: #252525;
-    transition: 0.3s;
-  }
-  .mobile-list.active{
+    position: fixed;
+    top: 0;
     left: 0;
-    width: 100%;
-    padding-top: 5rem;
-    margin-top: 1rem;
+    transform: translateX(-100%);
+    width: 100vw;
     height: 100vh;
+    background-color: #252525;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
   }
+
+  .mobile-list.active {
+    transform: translateX(0);
+  }
+
+  .mobile-list li {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+
 
 
   .container1 {
@@ -341,38 +358,37 @@ a {
     align-items: center;
     gap: 1rem;
   }
-  .small-circle {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    border-radius: 50%;
-   width: 8.7rem;
-   height: 8.7rem;
-  }
-  .small-circle p {
-    font-size: 1.8rem;
-  }
-  .big-circle p {
-    font-size: 2.4rem;
-  }
+  .small-circle,
   .big-circle {
     display: flex;
+    justify-content: center;  
+    align-items: center;      
     text-align: center;
-    align-items: center;
     border-radius: 50%;
-    width: 13.6rem;
-    height: 13.6rem;
+    aspect-ratio: 1 / 1;      
+    padding: 1rem;            
+    color: white;            
+  }
+
+  .small-circle {
+    width: 17vw;             
+    font-size: 1.8rem;
+  }
+  .big-circle {
+    width: 27vw;
+    font-size: 2.4rem;
   }
   .peer-network .big-circle,
   .peer-network .small-circle {
     background-color: #FCBB32;
-    box-shadow: 0px 0px 20px rgba(252, 187, 50, 1);
+    box-shadow: 0 0 20px rgba(252, 187, 50, 1);
   }
   .others .big-circle,
   .others .small-circle {
     background-color: #0047AD;
     box-shadow: -6px 4px 15px rgba(18, 126, 252, 1);
   }
+
 
 
 
@@ -418,50 +434,49 @@ a {
   }
   .peer1 h3 {
     font-size: 1.6rem;
-    margin-bottom: 1rem;
   }
   .peer1 p {
-    font-size: 1.2rem;
+    font-size: 2.7vw;
   }
   
   .step-box1,
   .step-box2,
   .step-box3,
   .step-box4 {
-    width: 100%;
     height: 15rem;
     display: flex;
     align-items: center;
     padding: 0 2rem;
     border-radius: 2.5rem;
+    align-self: center;
   }
   .step-box1 {
     background: 
-      url('../img/post.png') no-repeat 220px -17px , 
-      url('../img/1.png') no-repeat 350px 110px ,
+      url('../img/post.webp') no-repeat 109% -20px , 
+      url('../img/1.png') no-repeat 98% 92% ,
       #393939;
-    background-size: 50%, 7%;
+    background-size: 15rem, 7%;
   }
   .step-box2 {
     background: 
-      url('../img/earn.png') no-repeat 230px -40px , 
-      url('../img/2.png') no-repeat 350px 110px ,
+      url('../img/earn.webp') no-repeat 120% -40px , 
+      url('../img/2.png') no-repeat 98% 92% ,
       #393939;
-    background-size: 50%, 7%;
+    background-size: 16rem, 7%;
   }
   .step-box3 {
     background: 
-      url('../img/convert.png') no-repeat 240px -40px , 
-      url('../img/3.png') no-repeat 350px 110px ,
+      url('../img/convert.webp') no-repeat 121% -35px , 
+      url('../img/3.png') no-repeat 98% 92% ,
       #393939;
-    background-size: 50%, 7%;
+    background-size: 15rem, 7%;
   }
   .step-box4 {
     background: 
-      url('../img/cash.png') no-repeat 260px -25px , 
-      url('../img/4.png') no-repeat 350px 110px ,
+      url('../img/cash.webp') no-repeat 115% -30px , 
+      url('../img/4.png') no-repeat 98% 92% ,
       #393939;
-    background-size: 40%, 7%;
+    background-size: 13rem, 7%;
   }
   .peertoken {
     display: flex;
@@ -521,7 +536,7 @@ a {
   }
   .roadmap img {
     width: 10rem;
-    height: 47rem;
+    height: 60rem;
   }
   .r {
     margin-bottom: 1.2rem;
@@ -716,6 +731,139 @@ a {
     margin-top: 3rem;
   }
 
+
+
+  /* CSS FOR PEERAPP PAGE */
+
+  
+  
+  .peerapp-buttons {
+    display: none;
+  }
+  .peerapp-buttons2 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    align-items: center;
+  }
+  .peerapp-buttons1 {
+    display: flex;
+    width: 80%;
+    gap: 1.3rem;
+    flex-direction: column;
+  }
+  .peerapp-buttons1 .btn-apple,
+  .peerapp-buttons1 .btn-android {
+    margin: 0;
+    padding: 1rem;
+  }
+  .peerapp-buttons1 span {
+    font-size: 1.5rem;
+  }
+  .peer-scan {
+    display: none;
+  }
+  .
+  .peerCon1 .hero{
+    gap: 0;
+  }
+  .peerCon1 .hero .iphone15 {
+    width: 70%;
+  }
+  .peerCon,
+  .peerCon2 {
+    margin-top: 2rem;
+  }
+  .peerCon .hero,
+  .peerCon2 .hero {
+    overflow: hidden;
+    padding: 2rem;
+    border: 2px solid #5aa6ff;
+    border-radius: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .peerCon2 .hero {
+    height: 40rem;
+  }
+  .peerCon .hero1 {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .peerCon2 .hero img {
+    order: 2;
+  }
+  .peerCon2 .hero img {
+    width: 60%;
+  }
+  .QandA1 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+  .QandA1 div {
+    width: 100%;
+    background-color: #393939;
+    padding: 1rem;
+    border-radius: 2.5rem;
+  }
+  .question {
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.6rem;
+  }
+  
+  .answer {
+    display: none;
+    margin-top: 8px;
+    font-size: 1.4rem;
+    padding: 1rem;
+  }
+  .Q {
+    display: flex;
+    align-items: center;
+  }
+  .Q img {
+    width: 2rem;
+    cursor: pointer;
+    transition: 0;
+  }
+  .arrow {
+    transition: transform 0.3s ease;
+  }
+
+  .Q.active .arrow {
+    transform: rotate(180deg); 
+  }
+  .peer-earn {
+    margin-bottom: 2rem;
+  }
+  .peerCon .buttons{
+    margin: auto;
+  }
+  .coming-soon {
+    margin-top: 2rem;
+  }
+  .coming-soon-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .coming {
+    background-color: #fff;
+    color: #127EFC;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 2.5rem;
+    text-align: center;
+    box-shadow: 0px 0px 15px rgba(18, 126, 252, 1);
+  }
+
+
+
 /* CSS FOR IMPRESSUM PAGE */
 
 .company-information {
@@ -787,12 +935,12 @@ a {
   h3 {
     font-size: 2rem;
     width: 100%;
+    margin-bottom: 1rem;
   }
   p {
     font-size: 1.6rem;
     letter-spacing: 0.2rem;
     width: 100%;
-    margin-top: 2rem;
   }
   header {
     padding: 2rem 3rem;
@@ -811,47 +959,61 @@ a {
   .nav-list {
     display: none;
   }
-  .mobile-list li {
-    font-size: 2.2rem;
-    padding: 0.5rem 4rem;
-  }
   .mobile-menu {
     display: block;
     cursor: pointer;
-    margin-left: 20rem;
+    width: 30px;
+    margin: 1rem;
+    z-index: 1001;
+    position: relative;
   }
+
   .trigger {
     background-color: #fff;
     display: block;
-    width: 25px;
+    width: 100%;
     height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
+    margin: 6px 0;
     transition: all 0.3s ease-in-out;
   }
-  .mobile-menu.active .trigger:nth-child(2){
+
+  .mobile-menu.active .trigger:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  .mobile-menu.active .trigger:nth-child(2) {
     opacity: 0;
   }
-  .mobile-menu.active .trigger:nth-child(1){
-    transform: translateY(8px) rotate(45deg);
+  .mobile-menu.active .trigger:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
   }
-  .mobile-menu.active .trigger:nth-child(3){
-    transform: translateY(-8px) rotate(-45deg);
-  }
+
   .mobile-list {
-    position: absolute;
-    left: -100%;
-    gap: 0;
-    height: 100vh;
-    flex-direction: column;
-    background-color: #252525;
-    transition: 0.3s;
-  }
-  .mobile-list.active{
+    position: fixed;
+    top: 0;
     left: 0;
-    width: 100%;
-    padding-top: 5rem;
-    margin-top: 1rem;
+    transform: translateX(-100%);
+    width: 100vw;
+    height: 100vh;
+    background-color: #252525;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  .mobile-list.active {
+    transform: translateX(0);
+  }
+
+  .mobile-list li {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+
+  body.menu-open {
+    overflow: hidden;
   }
 
 
@@ -994,13 +1156,18 @@ a {
     flex-direction: column;
     gap: 2rem;
   }
+  .v {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
   .value-item {
     text-align: center;
     display: flex;
     border-radius: 2.5rem;
     margin-bottom: 2rem;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     width: 100%;
     height: 22.7rem;
@@ -1019,17 +1186,16 @@ a {
   .steps-section {
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 2rem;
   }
   .peer1 {
-    width: 60%;
+    width: 70%;
   }
   .peer1 h3 {
     font-size: 1.6rem;
-    
   }
   .peer1 p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
   
   .step-box1,
@@ -1042,36 +1208,34 @@ a {
     padding: 0 2rem;
     border-radius: 2.5rem;
     align-self: center;
-    max-width: 45rem;
-    min-width: 40rem;
   }
   .step-box1 {
     background: 
-      url('../img/post.webp') no-repeat 108% -30% , 
+      url('../img/post.webp') no-repeat 105% -20px , 
       url('../img/1.png') no-repeat 98% 92% ,
       #393939;
-    background-size: 40%, 7%;
+    background-size: 18rem, 5%;
   }
   .step-box2 {
     background: 
-      url('../img/earn.webp') no-repeat 120% 101% , 
+      url('../img/earn.webp') no-repeat 115% -40px , 
       url('../img/2.png') no-repeat 98% 92% ,
       #393939;
-    background-size: 50%, 7%;
+    background-size: 20rem, 5%;
   }
   .step-box3 {
     background: 
-      url('../img/convert.webp') no-repeat 125% 101% , 
+      url('../img/convert.webp') no-repeat 111% -50px , 
       url('../img/3.png') no-repeat 98% 92% ,
       #393939;
-    background-size: 50%, 7%;
+    background-size: 20rem, 5%;
   }
   .step-box4 {
     background: 
-      url('../img/cash.webp') no-repeat 118% 100% , 
+      url('../img/cash.webp') no-repeat 100% -30px , 
       url('../img/4.png') no-repeat 98% 92% ,
       #393939;
-    background-size: 50%, 7%;
+    background-size: 15rem, 5%;
   }
   .peertoken {
     display: flex;
@@ -1397,6 +1561,7 @@ a {
   h3 {
     font-size: 2.5rem;
     width: 100%;
+    margin-bottom: 1rem;
   }
   p {
     font-size: 1.8rem;
@@ -1603,13 +1768,13 @@ a {
     gap: 2rem;
   }
   .peer1 {
-    width: 60%;
+    width: 70%;
   }
   .peer1 h3 {
     font-size: 2rem;
   }
   .peer1 p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
   
   .step-box1,
@@ -1622,36 +1787,34 @@ a {
     padding: 0 2rem;
     border-radius: 2.5rem;
     align-self: center;
-    max-width: 45rem;
-    min-width: 40rem;
   }
   .step-box1 {
     background: 
-      url('../img/post.webp') no-repeat 108% -30% , 
+      url('../img/post.webp') no-repeat 105% -20px , 
       url('../img/1.png') no-repeat 98% 92% ,
       #393939;
-    background-size: 40%, 7%;
+    background-size: 18rem, 4%;
   }
   .step-box2 {
     background: 
-      url('../img/earn.webp') no-repeat 120% 101% , 
+      url('../img/earn.webp') no-repeat 110% -40px , 
       url('../img/2.png') no-repeat 98% 92% ,
       #393939;
-    background-size: 50%, 7%;
+    background-size: 20rem, 4%;
   }
   .step-box3 {
     background: 
-      url('../img/convert.webp') no-repeat 125% 101% , 
+      url('../img/convert.webp') no-repeat 109% -50px , 
       url('../img/3.png') no-repeat 98% 92% ,
       #393939;
-    background-size: 50%, 7%;
+    background-size: 20rem, 4%;
   }
   .step-box4 {
     background: 
-      url('../img/cash.webp') no-repeat 118% 100% , 
+      url('../img/cash.webp') no-repeat 105% -30px , 
       url('../img/4.png') no-repeat 98% 92% ,
       #393939;
-    background-size: 50%, 7%;
+    background-size: 15rem, 4%;
   }
   .peertoken {
     display: flex;
@@ -1828,7 +1991,7 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    gap: 4rem;
+    gap: 3rem;
   }
   .footer-links a {
     font-size: 1.6rem;
@@ -1976,12 +2139,12 @@ a {
   h3 {
     font-size: 2.5rem;
     width: 100%;
+    margin-bottom: 1rem;
   }
   p {
     font-size: 1.8rem;
     letter-spacing: 0.2rem;
     width: 100%;
-    margin-top: 2rem;
   }
   header {
     align-items: center;
@@ -3244,10 +3407,12 @@ a {
   .peerCon1 .hero .iphone15 {
     width: 50%;
   }
-  .peerCon {
+  .peerCon,
+  .peerCon2 {
     margin-top: 8rem;
   }
-  .peerCon .hero {
+  .peerCon .hero,
+  .peerCon2 .hero {
     overflow: hidden;
     padding: 3rem;
     border: 2px solid #5aa6ff;
@@ -3257,6 +3422,9 @@ a {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+  }
+  .peerapp-buttons2 {
+    display: none;
   }
   .peerapp-buttons {
     margin-top: 5rem;
@@ -3283,14 +3451,37 @@ a {
     display: block;
     width: 100%;
   }
-  .peerCon .hero1 {
+  .peerCon1 .hero{
+    gap: 0;
+  }
+  .peerCon1 .hero .iphone15 {
+    width: 50%;
+  }
+  .peerCon,
+  .peerCon2 {
+    margin-top: 8rem;
+  }
+  .peerCon .hero,
+  .peerCon2 .hero {
+    overflow: hidden;
+    padding: 3rem;
+    border: 2px solid #5aa6ff;
+    border-radius: 2.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .peerCon .hero1,
+  .peerCon2 .hero1 {
     width: 40%;
   }
-  .peerCon .hero img {
+  .peerCon2 .hero img {
     width: 30%;
     margin-bottom: -4rem;
   }
-  .peerCon #p2 {
+  .peerCon2 #p2 {
     margin-bottom: -30rem;
   }
   .QandA1 {
@@ -3356,7 +3547,7 @@ a {
     box-shadow: 0px 0px 15px rgba(18, 126, 252, 1);
   }
 
-  
+
 
   /* CSS FOR IMPRESSUM PAGE */
 
