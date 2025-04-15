@@ -1342,7 +1342,7 @@ a {
     
   .contact-section input,
   .contact-section textarea {
-    width: 70%;
+    width: 100%;
     padding: 1.6rem;
     margin-bottom: 1rem;
     border-radius: 1rem;
@@ -1368,7 +1368,7 @@ a {
     border: none;
     border-radius: 2.5rem;
     cursor: pointer;
-    width: 70%;
+    width: 100%;
   }
   .contact-details img {
     width: 2rem;
@@ -1489,59 +1489,189 @@ a {
     margin-top: 4rem;
   }
 
-/* CSS FOR IMPRESSUM PAGE */
 
-.company-information {
-  display: flex;
-  flex-direction: column;
-  gap: 5rem;
-  margin-top: 2rem;
-}
+  /* CSS FOR PEERAPP PAGE */
 
-.info-block {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 1.5rem;
-}
+  .peerapp-buttons {
+    display: none;
+  }
+  .peerapp-buttons2 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    align-items: center;
+  }
+  .peerapp-buttons1 {
+    display: flex;
+    gap: 1.3rem;
+    flex-direction: column;
+  }
+  .peerapp-buttons1 .btn-apple,
+  .peerapp-buttons1 .btn-android {
+    margin: 0;
+    padding: 1rem;
+  }
+  .peerapp-buttons1 span {
+    font-size: 1.5rem;
+  }
+  .peer-scan {
+    display: none;
+  }
+  .
+  .peerCon1 .hero{
+    gap: 0;
+  }
+  .peerCon1 .hero .iphone15 {
+    width: 70%;
+  }
+  .peerCon,
+  .peerCon2 {
+    margin-top: 2rem;
+  }
+  .peerCon .hero,
+  .peerCon2 .hero {
+    overflow: hidden;
+    padding: 2rem;
+    border: 2px solid #5aa6ff;
+    border-radius: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .peerCon2 .hero {
+    height: 40rem;
+  }
+  .peerCon .hero1 {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .peerCon2 .hero img {
+    order: 2;
+  }
+  .peerCon2 .hero img {
+    width: 60%;
+  }
+  .QandA1 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 4rem;
+  }
+  .QandA1 div {
+    width: 100%;
+    background-color: #393939;
+    padding: 1rem;
+    border-radius: 2.5rem;
+  }
+  .question {
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.6rem;
+  }
+  
+  .answer {
+    display: none;
+    margin-top: 8px;
+    font-size: 1.4rem;
+    padding: 1rem;
+  }
+  .Q {
+    display: flex;
+    align-items: center;
+  }
+  .Q img {
+    width: 2rem;
+    cursor: pointer;
+    transition: 0;
+  }
+  .arrow {
+    transition: transform 0.3s ease;
+  }
 
-.info-block h3,
-.info-block p {
-  font-size: 1.6rem;
-  margin: 0;
-  padding: 0.5rem 1rem;
-  width: -webkit-fill-available;
-}
-.info-block h3 {
-  width: 50%;
-}
-.information {
-  margin-top: 8rem;
-}
-.Impressum, 
-.information,
-.Liability, 
-.User-Generated, 
-.Hosting, 
-.Online-Dispute{
-  width: 100%;
-  padding: 3rem;
-  border-radius: 2rem;
-  border: none;
-  background-color: #393939;
-  color: #fcfcfc;
-}
-.Online-Dispute a {
-  color: #fcfcfc;
-  text-decoration: none;
-  transition: color 0.3s ease, transform .3s ease, font-weight .3s ease;
-  display: inline-block;
-}
+  .Q.active .arrow {
+    transform: rotate(180deg); 
+  }
+  .peer-earn {
+    margin-bottom: 2rem;
+  }
+  .peerCon .buttons{
+    margin: auto;
+  }
+  .coming-soon {
+    margin-top: 2rem;
+  }
+  .coming-soon-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .coming {
+    background-color: #fff;
+    color: #127EFC;
+    font-size: 1.4rem;
+    padding: 1rem;
+    border-radius: 2.5rem;
+    text-align: center;
+    box-shadow: 0px 0px 15px rgba(18, 126, 252, 1);
+  }
 
-.Online-Dispute a:hover {
-  color: #00ADEF;
-  font-weight: bold;
-  transform: translateY(-2px);
-}
+
+
+  /* CSS FOR IMPRESSUM PAGE */
+
+  .company-information {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    margin-top: 2rem;
+  }
+
+  .info-block {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1.5rem;
+  }
+
+  .info-block h3,
+  .info-block p {
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 0.5rem 1rem;
+    width: -webkit-fill-available;
+  }
+  .info-block h3 {
+    width: 50%;
+  }
+  .information {
+    margin-top: 8rem;
+  }
+  .Impressum, 
+  .information,
+  .Liability, 
+  .User-Generated, 
+  .Hosting, 
+  .Online-Dispute{
+    width: 100%;
+    padding: 3rem;
+    border-radius: 2rem;
+    border: none;
+    background-color: #393939;
+    color: #fcfcfc;
+  }
+  .Online-Dispute a {
+    color: #fcfcfc;
+    text-decoration: none;
+    transition: color 0.3s ease, transform .3s ease, font-weight .3s ease;
+    display: inline-block;
+  }
+
+  .Online-Dispute a:hover {
+    color: #00ADEF;
+    font-weight: bold;
+    transform: translateY(-2px);
+  }
 
 
 
