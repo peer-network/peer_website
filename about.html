@@ -121,23 +121,36 @@
 
   <body class="index">
     <header>
-      <a class="peerlink" title="Peer" href="https://peerapp.de/">
-        <img src="svg/logo_farbe.svg" alt="Peernetwork" width="50" height="50" />
-        <span class="italic absolute">&nbsp;peer</span>
-      </a>
-      <div>
-        <nav>
-          <ul>
-            <li><a href="index.html">for creators</a></li>
-            <li><a href="advertisers.html">for advertisers</a></li>
-            <li><a href="about.html" class="active">about us</a></li>
-            <li><a href="events.html">events</a></li>
-            <li><a href="blog.html">blog</a></li>
-          </ul>
-        </nav>
-        <a class="download" href="assets/WhitePaper.pdf" download>
-          <img src="svg/download.svg" alt="Download Whitepaper" title="Download our Whitepaper" width="45" height="44" />
+      <div class="nav-bar">
+        <a title="Peer" href="https://peerapp.de/">
+          <img class="peerlink" src="img/Peer logo.png" alt="Peernetwork" />
         </a>
+        <div>
+          <nav class="nav-list">
+            <ul>
+              <li><a href="index.html" title="peernetwork for creators" class="active">For Creators</a></li>
+              <li><a href="advertisers.html" title="peernetwork for advertisers">For Advertisers</a></li>
+              <li><a href="./peerapp.html" title="about peernetwork">Peer App</a></li>
+              <li><a href="about.html" title="peernetwork events">About Us</a></li>
+            </ul>
+          </nav>
+
+          <div class="mobile-menu">
+            <span class="trigger"></span>
+            <span class="trigger"></span>
+            <span class="trigger"></span>
+          </div>
+
+          <nav class="mobile-list">
+            <ul>
+              <li><a id="mobile" href="index.html" title="peernetwork for creators" class="active">For Creators</a></li>
+              <li><a id="mobile" href="advertisers.html" title="peernetwork for advertisers">For Advertisers</a></li>
+              <li><a id="mobile" href="./peerapp.html" title="about peernetwork">Peer App</a></li>
+              <li><a id="mobile"href="about.html" title="peernetwork events">About Us</a></li>
+              <li><a id="mobile" href="/" title="peernetwork events">Events</a></li>
+              <li><a id="mobile"href="/" title="peernetwork events">News</a></li>
+            </ul>
+          </nav>
       </div>
     </header>
     <main>
@@ -258,31 +271,66 @@
         </section>
       </article>
     </main>
-    <footer class="blau rund footer">
-      <a class="peerlink peergrid" title="Peer" href="https://peerapp.de/">
-        <img src="svg/logo_sw.svg" alt="Peernetwork" />
-        <span class="italic absolute">peer</span>
-      </a>
-      <form class="newsgrid" action="/newsletter.php">
-        <label for="email">
-          Your email for the Newsletter
-          <input name="email" type="email" id="email" required placeholder="Sign up for the newsletter here ..." />
-        </label>
-        <button type="submit">
-          <span>send</span>
-          <svg class="send" viewBox="0 0 50 50">
-            <g fill="none" stroke="#3d5eab" stroke-width="2.4">
-              <path d="M 39.3,40.6 25,7.3 10.7,40.6 25,33.18 Z" />
-              <path d="m25 33.1v-25.9" />
-            </g>
-          </svg>
-        </button>
-      </form>
-      <div class="impressumgrid">
-        <a href="impressum.php">Impressum</a>
-        &nbsp;
-        <a href="datenschutz.php">data privacy</a>
+    <footer>
+      <div class="contact-info">
+        <div class="contact-section">
+          <h2>Contact Us</h2>
+          <form>
+            <input id="email" type="email" placeholder="E-mail" autocomplete="on"/>
+            <input id="name" type="text" placeholder="Full Name" autocomplete="on"/>
+            <textarea id="message" rows="4" maxlength="500" placeholder="Message"></textarea>
+            <button id="submit" type="submit">Send</button>
+            <div id="error-display"></div>
+          </form>
+        </div>
+        <div class="contact-details">
+          <div class="contacts">
+            <a href="tel:+4917663426450" title="Peer Phone">
+              <img src="img/Phone icon.png" alt="phone icon" />
+              <span>+49 15123456789</span>
+            </a>
+            <a href="mailto:Peertoken@gmail.com" title="Peer Email">
+              <img src="img/Email Icon.png" alt="email icon" />
+              <span>peertoken@gmail.com</span>
+            </a>
+            <a href=""https://www.google.com/maps/place/M%C3%B6ckernstra%C3%9Fe+68c,+10965+Berlin-Kreuzberg,+Germany"" title="Peer Address">
+              <img src="img/Location Icon.png" alt="address icon" />
+              <span>Möckernstraße 68c, 10965 Berlin-Kreuzberg</span>
+            </a>
+          </div>
+          <div class="business-hours">
+            <div class="business">
+              <img src="img/Clock.png" alt="Clock icon">
+              <h3>Business Hours</h3>
+            </div>
+            <span>Mon - Friday: <br>9:00am - 6:00pm</span>
+          </div>
+        </div>
       </div>
+      <hr>
+      <div class="footer-links">
+        <ul>
+          <li><a href="index.html" title="peernetwork for creators" class="active">For Creators</a></li>
+          <li><a href="advertisers.html" title="peernetwork for advertisers">For Advertisers</a></li>
+          <li><a href="./peerapp.html" title="about peernetwork">Peer App</a></li>
+          <li><a href="about.html" title="peernetwork events">About Us</a></li>
+          <li><a href="/" title="peernetwork events">Events</a></li>
+          <li><a href="imprint.html" title="peernetwork events">Imprint</a></li>
+        </ul>
+        <a class="logo" title="Peer" href="https://peerapp.de/">
+          <img class="peerlink" src="img/Peer logo.webp" alt="Peernetwork" loading="lazy"/>
+        </a>
+      </div>
+      <div class="social-icons">
+        <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="img/linkedin.png" alt="Linkedin"></a>
+        <a href="#"><img src="img/x.png" alt="Twitter"></a>
+      </div>
+      
+      <div class="copyright">
+        &copy; Copyright 2025. All rights reserved.
+      </div>
+      
     </footer>
   </body>
 </html>
