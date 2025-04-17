@@ -881,6 +881,181 @@ a {
 
 
 
+ /* CSS FOR ABOUT US PAGE */
+
+.aboutsteps{
+  padding: 0 3rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 8rem;
+  gap: 2rem;
+  flex-direction: column;
+}
+  
+.aboutsteps-box1,
+.aboutsteps-box2{
+  display: flex;
+  flex-direction: column;
+
+  background-color: #393939;
+  border-radius: 2.5rem;
+  justify-content: center;
+  padding: 4rem;
+  gap: 5rem;
+  
+}
+.about1 {
+  height: 40%;   
+  display: flex; 
+  justify-content: center;
+}
+.aboutsteps-box1 img{
+  width: 100%;
+}
+.aboutsteps-box2 img{
+  width: 70%;
+}
+.about2 {
+  height: 50%;   
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.revenue{
+  
+  display: flex;
+  flex-direction: column;
+  gap:2rem;
+  align-items: center;
+  }
+  .revenue .circle1{
+  background-color: rgb(252, 187, 50);
+  box-shadow: rgb(252, 187, 50) 0px 0px 20px;
+  justify-content: center;
+  border-radius: 50%;
+  width: 13rem;
+  height: 13rem;
+  }
+  .revenue .circle2{
+  background-color: #0047AD;
+  box-shadow: -6px 4px 15px rgba(18, 126, 252, 1);
+  justify-content: center;
+  border-radius: 50%;
+  width: 13rem;
+  height: 13rem;
+  }
+  .revenue .r{
+  width: 100%;
+  }
+  .revenue .small-circle p {
+  font-size: 4rem;
+  }
+  .hero .vid {
+    padding: 1rem;
+    width: 50%;
+    border-radius: 2.5rem;
+  }
+  .team1,
+.team2{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.team12{
+display: flex;
+gap: 4rem;
+justify-content: center;
+}
+
+.team-row{
+display: flex;
+flex-direction: row;
+gap: 2rem;
+justify-content: center;
+}
+.team22,
+.team23 {
+display: flex;
+flex-direction: column;
+gap: 2rem;
+
+}
+.team1 .big-circle,
+.team22 .big-circle,
+.team23 .big-circle{
+  overflow: hidden;  
+  width: 30vw;
+  height: 30vw;           
+}    
+
+.team12 .circle1,
+.team22 .circle1,
+.team23 .circle1{
+  
+  gap: 0;
+}
+
+.team1 .big-circle img,
+.team22 .big-circle img,
+.team23 .big-circle img{
+  width: 125%;
+  object-fit: cover;   
+  
+}
+
+.circle1 span:nth-of-type(1) {
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-top: 2rem;
+}
+
+.circle1 span:nth-of-type(2) {
+  font-weight: 400;
+  color: #ccc;
+  font-size: 1.2rem;
+}
+
+/* CSS FOR ADVERTISERS PAGE */
+
+.adSteps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4rem;
+  margin-top: 2rem;
+}
+
+.adStep-box1,
+.adStep-box2,
+.adStep-box3 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  height: 25rem;
+  background-color: #393939;
+  border-radius: 2.5rem;
+  overflow: hidden;
+}
+.adSteps img {
+  width: 50%;
+}
+
+.adSteps .peer1 {
+  width: 100%;
+  padding: 2rem;
+}
+
+.adContainer{
+  margin-top: 3rem;
+}
+
+
+
+
   /* CSS FOR IMPRESSUM PAGE */
 
   .imprint1 {
@@ -1624,6 +1799,174 @@ a {
     box-shadow: 0px 0px 15px rgba(18, 126, 252, 1);
   }
 
+
+
+   /* CSS FOR ABOUT US PAGE */
+   
+  .aboutsteps{
+    padding: 0 3rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 8rem;
+    gap: 2rem;
+    flex-direction: column;
+  }
+    
+  .aboutsteps-box1,
+  .aboutsteps-box2{
+    display: flex;
+    flex-direction: column;
+
+    background-color: #393939;
+    border-radius: 2.5rem;
+    justify-content: center;
+    padding: 4rem;
+    gap: 5rem;
+    
+  }
+  .about1 {
+    height: 40%;   
+    display: flex; 
+    justify-content: center;
+  }
+  .about2 {
+    height: 50%;   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .revenue{
+    
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    align-items: center;
+    }
+    .revenue .circle1{
+    background-color: rgb(252, 187, 50);
+    box-shadow: rgb(252, 187, 50) 0px 0px 20px;
+    justify-content: center;
+    border-radius: 50%;
+    width: 13rem;
+    height: 13rem;
+    }
+    .revenue .circle2{
+    background-color: #0047AD;
+    box-shadow: -6px 4px 15px rgba(18, 126, 252, 1);
+    justify-content: center;
+    border-radius: 50%;
+    width: 13rem;
+    height: 13rem;
+    }
+    .revenue .r{
+    width: 100%;
+    }
+    .revenue .small-circle p {
+    font-size: 4rem;
+    }
+    .hero .vid {
+      padding: 1rem;
+      width: 50%;
+      border-radius: 2.5rem;
+    }
+    .team1,
+  .team2{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .team12{
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+  }
+
+  .team-row{
+    display: flex;
+    flex-direction: row;
+    gap: 7rem;
+    justify-content: center;
+  }
+  .team22,
+  .team23 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  }
+  .team1 .big-circle,
+  .team22 .big-circle,
+  .team23 .big-circle{
+    overflow: hidden;  
+    width: 30vw;
+    height: 30vw;           
+  }    
+
+  .team12 .circle1,
+  .team22 .circle1,
+  .team23 .circle1{
+    
+    gap: 0;
+  }
+
+  .team1 .big-circle img,
+  .team22 .big-circle img,
+  .team23 .big-circle img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   
+    
+  }
+
+  .circle1 span:nth-of-type(1) {
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-top: 2rem;
+  }
+  
+  .circle1 span:nth-of-type(2) {
+    font-weight: 400;
+    color: #ccc;
+    font-size: 1.3rem;
+  }
+
+  /* CSS FOR ADVERTISERS PAGE */
+
+  .adSteps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: 2rem;
+  }
+
+  .adStep-box1,
+  .adStep-box2,
+  .adStep-box3 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 25rem;
+    background-color: #393939;
+    border-radius: 2.5rem;
+    overflow: hidden;
+  }
+  .adSteps img {
+    width: 50%;
+  }
+
+  .adSteps .peer1 {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .adContainer{
+    margin-top: 3rem;
+  }
 
 
   /* CSS FOR IMPRESSUM PAGE */
