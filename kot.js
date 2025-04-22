@@ -167,3 +167,26 @@ document.querySelectorAll('.Q').forEach(questionButtons => {
     answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
   });
 });
+
+
+// Get Elements
+const questionBtn = document.getElementById('question-btn');
+const popupModal = document.getElementById('popup-modal');
+const closeBtn = document.getElementById('close-btn');
+
+// Show Popup
+questionBtn.addEventListener('click', () => {
+  popupModal.classList.remove('hidden');
+});
+
+// Hide Popup
+closeBtn.addEventListener('click', () => {
+  popupModal.classList.add('hidden');
+});
+
+// Hide Popup When Clicking Outside Content
+window.addEventListener('click', (e) => {
+  if (e.target === popupModal) {
+    popupModal.classList.add('hidden');
+  }
+});
