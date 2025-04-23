@@ -130,14 +130,20 @@ a {
 .peerapp-buttons,
 .peerapp-buttons2 {
   display: flex;
-  transition: all 0.5s ease-in-out;
 }
 .btn-apple img,
 .btn-android img {
   width: 2.5rem;
 }
+.btn-apple:hover img,
+.btn-android:hover img {
+  filter: brightness(30) drop-shadow(0 0 2px #000);
+} 
 .btn-webapp img {
   width: 3rem;
+}
+.btn-webapp:hover img {
+  filter: brightness(0) saturate(100%) invert(45%) sepia(90%) saturate(4000%) hue-rotate(200deg) brightness(95%) contrast(95%) drop-shadow(0 0 2px #000);
 }
 .btn-apple ,
 .btn-android {
@@ -149,6 +155,12 @@ a {
   padding: 1rem;
   justify-content: center;
   width: 100%;
+  transition: all 0.3s ease;
+}
+.btn-apple:hover,
+.btn-android:hover {
+  background-color:#127EFC;
+  box-shadow: 0 0 6px #fff;
 }
 .btn-webapp {
   background-color: #127EFC;
@@ -159,16 +171,44 @@ a {
   align-items: center;
   justify-content: center;
   width: 100%;
+  transition: all 0.3s ease;
+}
+.btn-webapp:hover {
+  background-color:#fff;
+  box-shadow: 0 0 6px #127EFC;
 }
 .btn-webapp span{
   font-size: 1.5rem;
   margin-right: 0.4rem;
+}
+.btn-webapp:hover span {
+  color: #127EFC;
+  text-shadow: 0 0 2px #000;
 }
 .btn-apple span,
 .btn-android span {
   color: #127EFC;
   font-size: 1.5rem;
   margin-right: 0.8rem;
+}
+.btn-apple:hover span,
+.btn-android:hover span {
+  color: #fff;
+  text-shadow: 0 0px 4px #000;
+}
+.register {
+  transition: all 0.3s ease;
+}
+.register:hover {
+  background-color:#fff;
+  box-shadow: 0 0 6px #127EFC;
+}
+.register:hover span {
+  color: #127EFC;
+  text-shadow: 0 0 2px #000;
+}
+.register:hover img {
+  filter: brightness(0) saturate(100%) invert(45%) sepia(90%) saturate(4000%) hue-rotate(200deg) brightness(95%) contrast(95%) drop-shadow(0 0 2px #000);
 }
 .value-item {
   max-width: 38rem;
@@ -839,7 +879,10 @@ a {
     width: 100%;
     text-align: center;
     font-size: 1.2rem;
-
+  }
+  .privacy {
+    color: rgba(128, 128, 128, 1);
+    margin-left: 1rem;
   }
   .logo {
     display: flex;
@@ -1753,7 +1796,10 @@ a {
     width: 100%;
     text-align: center;
     font-size: 1.4rem;
-
+  }
+  .privacy {
+    color: rgba(128, 128, 128, 1);
+    margin-left: 2rem;
   }
   .logo {
     display: flex;
@@ -2602,6 +2648,10 @@ a {
     width: 100%;
     text-align: center;
     font-size: 1.5rem;
+  }
+  .privacy {
+    color: rgba(128, 128, 128, 1);
+    margin-left: 2rem;
   }
   
   .logo {
@@ -3544,6 +3594,10 @@ a {
     width: 100%;
     text-align: center;
     font-size: 1.5rem;
+  }
+  .privacy {
+    color: rgba(128, 128, 128, 1);
+    margin-left: 2rem;
   }
   
   .logo {
@@ -4488,6 +4542,10 @@ a {
     text-align: center;
     font-size: 1.7rem;
     margin-top: 1rem;
+  }
+  .privacy {
+    color: rgba(128, 128, 128, 1);
+    margin-left: 2rem;
   }
   
   .logo {
