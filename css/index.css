@@ -834,14 +834,12 @@ a {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-
   }
   .business {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-  }
-    
+  } 
   .business-hours h3 {
     margin-top: 1.1rem;
     font-size: 1.5rem;
