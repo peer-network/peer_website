@@ -1259,9 +1259,9 @@ a {
     font-weight: bold;
     transform: translateY(-2px);
   }
-  .valid {
+  /* .valid {
     margin-top: 3rem;
-  }
+  } */
 
 
 }
@@ -2176,9 +2176,9 @@ a {
     font-weight: bold;
     transform: translateY(-2px);
   }
-  .valid {
+  /* .valid {
     margin-top: 4rem;
-  }
+  } */
 
 
 }
@@ -3033,9 +3033,9 @@ a {
     font-weight: bold;
     transform: translateY(-2px);
   }
-  .valid {
+  /* .valid {
     margin-top: 6rem;
-  }
+  } */
 
 
 }
@@ -3981,9 +3981,9 @@ a {
     font-weight: bold;
     transform: translateY(-2px);
   }
-  .valid {
+  /* .valid {
     margin-top: 6rem;
-  }
+  } */
 
   
 }
@@ -4926,7 +4926,7 @@ a {
   .Online-Dispute a:hover {
     color: #00ADEF;
   }
-  .valid {
+  /* .valid {
     margin-top: 8rem;
-  }
+  } */
 }
