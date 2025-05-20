@@ -1217,10 +1217,11 @@ a {
     font-weight: bold;
     transform: translateY(-2px);
   }
-  .valid {
+  /* .valid {
     margin-top: 3rem;
-  }
-}
+  } */
+
+
 
 @media only screen and (min-width: 451px) and (max-width: 768px) {
   .fa1 h3 {
@@ -2096,10 +2097,10 @@ a {
     font-weight: bold;
     transform: translateY(-2px);
   }
-  .valid {
+  /* .valid {
     margin-top: 4rem;
-  }
-}
+  } */
+
 
 @media only screen and (min-width: 769px) and (max-width: 992px) {
   h1 {
@@ -2913,10 +2914,12 @@ a {
     font-weight: bold;
     transform: translateY(-2px);
   }
-  .valid {
+  /* .valid {
     margin-top: 6rem;
-  }
-}
+  } */
+
+
+
 
 @media only screen and (min-width: 993px) and (max-width: 1240px) {
   h1 {
@@ -3821,10 +3824,12 @@ a {
     font-weight: bold;
     transform: translateY(-2px);
   }
-  .valid {
+  /* .valid {
     margin-top: 6rem;
-  }
-}
+
+  } */
+
+  
 
 @media only screen and (min-width: 1241px) {
   h1 {
@@ -4722,7 +4727,6 @@ a {
   .Online-Dispute a:hover {
     color: #00adef;
   }
-  .valid {
+  /* .valid {
     margin-top: 8rem;
-  }
-}
+  } */
