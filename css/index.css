@@ -135,15 +135,15 @@ a {
 .btn-android img {
   width: 2.5rem;
 }
-.btn-apple:hover img,
-.btn-android:hover img {
-  filter: brightness(30) drop-shadow(0 0 2px #000);
-}
 .btn-webapp img {
   width: 3rem;
+  filter: brightness(0) saturate(100%) invert(39%) sepia(57%) saturate(2476%) 
+          hue-rotate(195deg) brightness(98%) contrast(104%);
 }
+.btn-apple:hover img,
+.btn-android:hover img,
 .btn-webapp:hover img {
-  filter: brightness(0) saturate(100%) invert(45%) sepia(90%) saturate(4000%) hue-rotate(200deg) brightness(95%) contrast(95%) drop-shadow(0 0 2px #000);
+  filter: brightness(30) drop-shadow(0 0 2px #000);
 }
 .btn-apple,
 .btn-android {
@@ -157,13 +157,27 @@ a {
   width: 100%;
   transition: all 0.3s ease;
 }
+
+.btn-feedback {
+background-color: #fff;
+  border-radius: 2.5rem;
+  margin: 0.7rem 0;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  justify-content: center;
+  width: 50%;
+  transition: all 0.3s ease;
+}
+
 .btn-apple:hover,
-.btn-android:hover {
+.btn-android:hover,
+.btn-feedback:hover {
   background-color: #127efc;
   box-shadow: 0 0 6px #fff;
 }
 .btn-webapp {
-  background-color: #127efc;
+  background-color: #fff;
   border-radius: 2.5rem;
   margin: 0.7rem 0;
   padding: 1rem;
@@ -174,25 +188,28 @@ a {
   transition: all 0.3s ease;
 }
 .btn-webapp:hover {
-  background-color: #fff;
-  box-shadow: 0 0 6px #127efc;
+  background-color: #127efc;
+  box-shadow: 0 0 6px #fff;
 }
 .btn-webapp span {
+  color: #127efc;
   font-size: 1.5rem;
   margin-right: 0.4rem;
 }
 .btn-webapp:hover span {
-  color: #127efc;
+  color: #fff;
   text-shadow: 0 0 2px #000;
 }
 .btn-apple span,
-.btn-android span {
+.btn-android span,
+.btn-feedback span {
   color: #127efc;
   font-size: 1.5rem;
   margin-right: 0.8rem;
 }
 .btn-apple:hover span,
-.btn-android:hover span {
+.btn-android:hover span,
+.btn-feedback:hover span {
   color: #fff;
   text-shadow: 0 0px 4px #000;
 }
@@ -1350,7 +1367,9 @@ a {
   }
   .btn-apple,
   .btn-android,
-  .btn-webapp {
+  .btn-webapp,
+  .btn-feedback
+   {
     width: 45%;
     min-width: 30rem;
     margin: 0;
@@ -2173,7 +2192,8 @@ a {
   }
   .btn-apple,
   .btn-android,
-  .btn-webapp {
+  .btn-webapp,
+  .btn-feedback {
     width: 45%;
     margin: 0;
     padding: 1.5rem 0;
@@ -3944,6 +3964,7 @@ a {
     flex-wrap: wrap;
     width: 100%;
     gap: 2rem;
+    justify-content: center;
   }
   .btn-apple img,
   .btn-android img {
@@ -4280,16 +4301,6 @@ a {
     min-height: 15rem;
   }
 
-  .contact-section button {
-    width: 100%;
-    background-color: #007bff; /* Blue button */
-    color: #fff;
-    padding: 2rem;
-    border: none;
-    border-radius: 2.5rem;
-    cursor: pointer;
-    font-size: 2rem;
-  }
   .contact-details {
     width: 80%;
     padding: 0;
