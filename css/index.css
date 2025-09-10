@@ -2198,15 +2198,6 @@ background-color: #fff;
     margin: 0;
     padding: 1.5rem 0;
   }
-
-  /* Mobile Responsive Styles */
-        @media (max-width: 768px) {
-            .btn-feedback {
-                width: 100%;
-                min-width: unset;
-                max-width: 100%;
-                padding: 1.5rem;
-            }
       
   .container2 {
     margin-top: 6rem;
