@@ -1,0 +1,14 @@
+name: Security Scan
+
+on:
+  pull_request:
+    branches:
+      - main
+      - development
+
+jobs:
+  gitleaks:
+    name: Run Gitleaks Scan
+    uses: peer-network/peer_global_security/.github/workflows/gitleaks.yml@main
+    with:
+      config: gitleaks.toml
