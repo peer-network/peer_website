@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg fill="none" version="1.1" viewBox="0 0 584 267" xmlns="http://www.w3.org/2000/svg">
+ <g filter="url(#filter0_g_132_33)">
+  <text x="53.214142" y="82.652847" fill="#000000" font-size="61.5px" font-weight="bold" stroke-width="5.12">different</text>
+ </g>
+ <defs>
+  <filter id="filter0_g_132_33" x="0" y="0" width="584" height="266" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+   <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+   <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+   <feTurbulence baseFrequency="0.01 0.01" numOctaves="3" seed="5" type="fractalNoise">
+    <animate id="animTurbulence" fill="freeze" attributeName="baseFrequency" dur="4s" repeatCount="1" values="0.02 0.02;0 0"/>
+   </feTurbulence>
+   <feDisplacementMap width="100%" height="100%" in="shape" result="displacedImage" scale="100" xChannelSelector="R" yChannelSelector="G">
+    <animate id="animDisplacement" fill="freeze" attributeName="scale" dur="2s" repeatCount="1" values="80;0"/>
+   </feDisplacementMap>
+   <feMerge result="effect1_texture_132_33">
+    <feMergeNode in="displacedImage"/>
+   </feMerge>
+   <feGaussianBlur stdDeviation="1 1" id="feGaussianBlur1">
+    <animate attributeName="stdDeviation" from="1 1" to="0 0" dur="2s" repeatCount="1" fill="freeze" begin="0s"/>
+   </feGaussianBlur>
+  </filter>
+ </defs>
+</svg>
