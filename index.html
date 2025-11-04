@@ -115,6 +115,7 @@
     <link rel="icon" type="image/svg+xml" href="svg/logo_farbe.svg" />
     <link rel="canonical" href="https://peerapp.de/index.html" />
     <script src="kot.js" async></script>
+    <script src="js/slider.js" defer></script>
     <title>PeerNetwork: Social Media Platform with Blockchain and Monetising</title>
   </head>
 
@@ -134,8 +135,7 @@
           <img src="svg/download.svg" alt="Download Whitepaper" title="Download our Whitepaper" width="45" height="44" />
         </a> -->
       </div>
-      <div class="peerlink">
-      </div>
+      <div class="peerlink"></div>
       <a title="Peer" href="https://peerapp.de/">
         <img src="svg/logo_farbe.svg" alt="Peernetwork" width="50" height="50" />
         <span class="italic absolute">&nbsp;peer</span>
@@ -149,23 +149,27 @@
             <br />
             but&nbsp;
           </h1>
+          <!-- <filter id="filter" color-interpolation-filters="linearRGB" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse">
+	<feTurbulence type="fractalNoise" baseFrequency="0.01 0.01" numOctaves="3" seed="1" stitchTiles="noStitch" x="0%" y="0%" width="100%" height="100%" result="turbulence"/>
+	<feDisplacementMap in="SourceGraphic" in2="turbulence" scale="100" xChannelSelector="B" yChannelSelector="G" x="0%" y="0%" width="100%" height="100%" result="displacementMap"/>
+</filter> -->
           <svg class="different" fill="none" viewBox="0 0 1150 267" xmlns="http://www.w3.org/2000/svg">
             <text filter="url(#filter0_g_132_33)" x="0" y="0" dominant-baseline="hanging" textLength="1150" lengthAdjust="spacing" font-size="267" fill="#000000" font-weight="900" stroke="black" stroke-width="10" letter-spacing="">different.</text>
             <defs>
-              <filter id="filter0_g_132_33" x="0" y="0" width="1150" height="267" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
-                <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-                <feTurbulence baseFrequency="0.01 0.01" numOctaves="3" seed="5" type="fractalNoise">
-                  <animate id="animTurbulence" fill="freeze" attributeName="baseFrequency" dur="4s" repeatCount="1" values="0.02 0.02;0 0" />
+              <filter id="filter0_g_132_33" x="0" y="0" width="1150" height="267" color-interpolation-filters="linearRGB" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse">
+                <!-- <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" /> -->
+                <feTurbulence baseFrequency="0.01 0.01" numOctaves="3" seed="1" type="fractalNoise" stitchTiles="noStitch" x="0%" y="0%" width="100%" height="100%" result="turbulence">
+                  <animate id="animTurbulence" fill="freeze" attributeName="baseFrequency" dur="6s" repeatCount="1" values="0.01 0.01;0 0" />
                 </feTurbulence>
-                <feDisplacementMap width="100%" height="100%" in="shape" result="displacedImage" scale="100" xChannelSelector="R" yChannelSelector="G">
-                  <animate id="animDisplacement" fill="freeze" attributeName="scale" dur="2s" repeatCount="1" values="80;0" />
+                <feDisplacementMap width="100%" height="100%" in="SourceGraphic" in2="turbulence" result="displacedImage" x="0%" y="0%" width="100%" height="100%" scale="200" xChannelSelector="B" yChannelSelector="G">
+                  <animate id="animDisplacement" fill="freeze" attributeName="scale" dur="6s" repeatCount="1" values="250;0" />
                 </feDisplacementMap>
-                <feMerge result="effect1_texture_132_33">
+                <!-- <feMerge result="effect1_texture_132_33">
                   <feMergeNode in="displacedImage" />
-                </feMerge>
+                </feMerge> -->
                 <feGaussianBlur stdDeviation="1 1" id="feGaussianBlur1">
-                  <animate attributeName="stdDeviation" from="1 1" to="0 0" dur="2s" repeatCount="1" fill="freeze" begin="0s" />
+                  <animate attributeName="stdDeviation" from="1 1" to="0 0" dur="6s" repeatCount="1" fill="freeze" begin="0s" />
                 </feGaussianBlur>
               </filter>
             </defs>
@@ -193,7 +197,7 @@
         </div>
       </section>
 
-      <section class="">
+      <section class="discover">
         <div>
           <h2>
             Discover a
@@ -208,22 +212,21 @@
             <br />
             innovation, where transparency and fairness belong to everyone.
             <br />
+            <br />
             Your content gains value through engagement
             <br />
             — likes, comments, and views all contribute to your token earnings.
           </p>
           <strong>
-            <p>
-              No followers required.
-              <br />
-              No gatekeepers.
-              <br />
-              Just real recognition for real impact.
-            </p>
+            No followers required.
+            <br />
+            No gatekeepers.
+            <br />
+            Just real recognition for real impact.
           </strong>
         </div>
       </section>
-      <section class="">
+      <section class="discover">
         <div class="left">
           <h2>Welcome to Peer Network</h2>
           <strong>
@@ -262,33 +265,78 @@
           </strong>
         </div>
       </section>
-      <section class="">
-        <h2>How peer works</h2>
+      <section class="howpeerworks">
+        <h2>
+          How
+          <span class="italic bold">peer</span>
+          works
+        </h2>
         <div class="handy">
-          <div class="screen eins">
-            <img src="img/loginstart3.png" alt="Welcome to Peer Network" width="699" height="1511" loading="lazy" />
-          </div>
-          <div class="screen zwei">
-            <img src="img/loginstart1.png" alt="Create Content" width="699" height="1511" loading="lazy" />
-          </div>
-          <div class="screen drei">
-            <img src="img/loginstart2.png" alt="Engage & Earn" width="699" height="1511" loading="lazy" />
-          </div>
-          <div class="screen vier">
-            <img src="img/loginstart3-1.png" alt="Your effort = Your reward" width="699" height="1511" loading="lazy" />
-          </div>
-          <div class="screen fuenf">
-            <img src="img/loginstart4.png" alt="How to use tokens?" width="699" height="1511" loading="lazy" />
-          </div>
+          <!-- <div class="screen eins"> -->
+          <img src="img/loginstart3.png" alt="Welcome to Peer Network" width="699" height="1511" loading="lazy" />
+          <!-- </div> -->
+          <!-- <div class="screen zwei"> -->
+          <img src="img/loginstart1.png" alt="Create Content" width="699" height="1511" loading="lazy" />
+          <!-- </div> -->
+          <!-- <div class="screen drei"> -->
+          <img src="img/loginstart2.png" alt="Engage & Earn" width="699" height="1511" loading="lazy" />
+          <!-- </div> -->
+          <!-- <div class="screen vier"> -->
+          <img src="img/loginstart3-1.png" alt="Your effort = Your reward" width="699" height="1511" loading="lazy" />
+          <!-- </div> -->
+          <!-- <div class="screen fuenf"> -->
+          <img src="img/loginstart4.png" alt="How to use tokens?" width="699" height="1511" loading="lazy" />
+          <!-- </div> -->
+        </div>
+        <div class="slide-indicators">
+          <p data-slide="0" class="active">Welcome to peer</p>
+          <p data-slide="1">Create, like, comment</p>
+          <p data-slide="2">Engage and earn</p>
+          <p data-slide="3">Your effort = Your rewards</p>
+          <p data-slide="4">How to use tokens?</p>
         </div>
       </section>
       <section class="">
-        <p>No followers required.</p>
-        <p>No gatekeepers.</p>
-        <p>Just real recognition for real impact.</p>
+        <p>Peer Network - Developed by a young tech startup in Berlin-Kreuzberg.</p>
+        <p>We have a vision of a better internet and a better, fairer way to connect.</p>
+
+        <h2>Setting new standards in social media.</h2>
       </section>
     </main>
-    <footer>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div>
+        <nav class="footer-links">
+          <a href="eula.html">EULA</a>
+          <a href="privacy.html">Privacy policy</a>
+          <a href="imprint.html">Imprint</a>
+        </nav>
+
+        <div class="footer-contact">
+          <p>
+            <strong>Peer Network PSE UG (haftungsbeschränkt)</strong>
+            <br />
+            Möckernstraße 68C, 10965 Berlin-Kreuzberg
+            <br />
+            <a href="mailto:help.peernetwork@gmail.com">help.peernetwork@gmail.com</a>
+          </p>
+        </div>
+        </div>
+        <div class="footer-right">
+          <div class="socials">
+            <a href="#" aria-label="Peer" class="icon-dot"><img src="svg/logo_sw.svg" alt="Peer"></a>
+            <a href="#" aria-label="Instagram"><img src="svg/instagram-logo.svg" alt="instagram"></a>
+            <a href="#" aria-label="X">𝕏</a>
+            <a href="#" aria-label="TikTok"><img src="svg/tiktok.svg" alt="tiktok"></a>
+            <a href="#" aria-label="LinkedIn">in</a>
+          </div>
+        
+        </div>
+        <hr>
+        <div class="copyright">© Copyright 2025. All rights reserved.</div>
+      </div>
+    </footer>
+    <!-- <footer>
       <nav>
         <ul>
           <li><a href="terms.html" title="Terms of service">Terms of service</a></li>
@@ -313,14 +361,14 @@
             <address>Kantstraße 127, Berlin, Germany</address>
           </div>
           <div class="conCopyright">
-            <span class="copyright">© Copyright 2025. All rights reserved.&nbsp;</span>
+            <span class="copyright">© Copyright 2025. All rights reserved.&nbsp;</span> -->
             <!-- <a class="peerlink peerCopyright" href="https://peerapp.de/" title="Peernetwork Site">
               <img src="svg/logo_farbe.svg" alt="Peernetwork" width="50" height="50" loading="lazy" />
               <span class="italic absolute">&nbsp;peer</span>
             </a> -->
-          </div>
+          <!-- </div>
         </div>
       </div>
-    </footer>
+    </footer> -->
   </body>
 </html>

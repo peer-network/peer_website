@@ -1,0 +1,117 @@
+/* styles.css — base + small extras for imprint page */
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
+  line-height: 1.55;
+}
+body {
+  margin: 0;
+  color: #101010;
+  background: #fff;
+}
+
+/* container & headings */
+.container {
+  max-width: 900px;
+  margin: 40px auto 100px;
+  padding: 0 24px;
+}
+.page-header h1 {
+  margin: 28px 0 14px;
+  font-size: 32px;
+  letter-spacing: 0.2px;
+}
+h2 {
+  margin: 26px 0 12px;
+  font-size: 20px;
+}
+h3 {
+  margin: 16px 0 8px;
+  font-size: 16px;
+  color: #374151;
+}
+p {
+  margin: 8px 0 10px;
+}
+a {
+  color: #0b63ce;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* subtle separators like the design */
+section + section {
+  border-top: 1px solid #eaeaea;
+  padding-top: 18px;
+}
+.card-text {
+  padding: 8px 0;
+}
+
+/* top gradient bar */
+.top-gradient {
+  height: 56px;
+  background: linear-gradient(90deg, #4e7ef7, #7a3bff);
+}
+
+/* footer */
+.site-footer {
+  background: #0c0c0c;
+  color: #fff;
+  padding: 44px 0 22px;
+}
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 28px;
+  align-items: start;
+}
+.footer-links a {
+  display: block;
+  color: #fff;
+  opacity: 0.92;
+  margin: 6px 0;
+}
+.footer-contact p {
+  margin: 0;
+  line-height: 1.6;
+}
+.footer-contact a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer-right {
+  text-align: right;
+}
+.socials {
+  display: inline-flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.socials a {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #3a3a3a;
+  border-radius: 50%;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+.socials a:hover {
+  border-color: #6b6b6b;
+}
+.copyright {
+  font-size: 12px;
+  color: #bdbdbd;
+}
