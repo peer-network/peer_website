@@ -5,6 +5,7 @@
 html {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
   line-height: 1.55;
+  font-size: 2vw;
 }
 body {
   margin: 0;
@@ -14,32 +15,39 @@ body {
 
 /* container & headings */
 .container {
-  max-width: 900px;
-  margin: 40px auto 100px;
-  padding: 0 24px;
+  max-width: 80vw;
+  margin: 17vh auto 10vh;
+  /* padding: 0 3rem; */
 }
 .page-header h1 {
-  margin: 28px 0 14px;
-  font-size: 32px;
-  letter-spacing: 0.2px;
+	margin: 6vh 0 8vh;
+	font-size: 3.4vw;
+	letter-spacing: 0.2px;
 }
 h2 {
-  margin: 26px 0 12px;
-  font-size: 20px;
+  margin: 6vh 0 4vh;
+  font-size: 2vw;
+}
+h2::after {
+  margin-top: 1vh;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #000;
 }
 h3 {
   margin: 16px 0 8px;
-  font-size: 16px;
+  font-size: 1.6vw;
   color: #374151;
 }
 p {
   margin: 8px 0 10px;
 }
 a {
-  color: #0b63ce;
   text-decoration: none;
 }
-a:hover {
+footer a:hover {
   text-decoration: underline;
 }
 
@@ -55,29 +63,44 @@ section + section {
 /* top gradient bar */
 .top-gradient {
   height: 56px;
-  background: linear-gradient(90deg, #4e7ef7, #7a3bff);
+  background: linear-gradient(90deg, #2865ffb5, #4d00f096);
 }
 
 /* footer */
+
+.peerlinkfooter {
+	position: absolute;
+	top: unset;
+	left: unset;
+	color: #fff;
+	margin-left: 1vw;
+	display: flex;
+	align-items: center;
+}
+
 .site-footer {
   background: #0c0c0c;
   color: #fff;
-  padding: 44px 0 22px;
+  padding: 2vh 0;
+  font-size: 1.5vw;
 }
 .footer-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 24px;
+  /* max-width: 1100px; */
+  /* margin: 0 auto; */
+  padding: 2rem;
   display: grid;
-  grid-template-columns: 1fr 1fr auto;
-  gap: 28px;
+  grid-template-columns: 1fr 1fr;
+  /* gap: 28px; */
   align-items: start;
 }
 .footer-links a {
   display: block;
   color: #fff;
   opacity: 0.92;
-  margin: 6px 0;
+  margin: 1vh 0;
+}
+.footer-contact {
+  margin: 2rem 0 0 0 ;
 }
 .footer-contact p {
   margin: 0;
@@ -90,15 +113,19 @@ section + section {
 
 .footer-right {
   text-align: right;
+  align-self: end;
 }
 .socials {
   display: inline-flex;
-  gap: 12px;
-  margin-bottom: 12px;
+  gap: 1vw;
+}
+.socials a img {
+  width: 50%;
+  height: 50%;
 }
 .socials a {
-  width: 34px;
-  height: 34px;
+  width: 4vw;
+  height: 4vw;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -106,12 +133,76 @@ section + section {
   border-radius: 50%;
   color: #fff;
   text-decoration: none;
-  font-size: 14px;
+  /* font-size: 14px; */
 }
 .socials a:hover {
-  border-color: #6b6b6b;
+ filter: invert(1);
+  background-color: #000;
 }
 .copyright {
-  font-size: 12px;
   color: #bdbdbd;
+  text-align: right;
+  margin-right: 4%;
+}
+hr {
+    /* height: 2px; */
+  width: 92%;
+  margin-bottom: 2rem;
+}
+.peerlink {
+  position: fixed;
+  top: 0em;
+  left: 0;
+  /* left: calc((100vw - (min(min(100vh, 80vmin) * 1728 / 997, 100vw))) / 2); */
+  height: 3rem;
+  width: 100vw;
+  /* width: calc(min(min(100vh, 80vmin) * 1728 / 997, 100vw)); */
+  background-color: #ffffff3d;
+  z-index: 10;
+  -webkit-backdrop-filter: blur(5px) saturate(150%);
+  backdrop-filter: blur(5px) saturate(185%);
+}
+.peerlink + a {
+	position: fixed;
+	top: 0em;
+	/* left: calc((100vw - (min(min(100vh, 80vmin) * 1728 / 997, 100vw))) / 2); */
+	left: 0rem;
+	height: 3rem;
+	width: calc(min(100vh, 80vmin) * 1728 / 997);
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	color: #fff;
+	font-size: 1rem;
+	z-index: 153;
+	display: flex;
+	align-items: center;
+}
+ .peerlinkfooter > img {
+transition: all 0.3s ease;
+  filter: grayscale(1) brightness(2);
+ }
+ .peerlinkfooter:hover img {
+   filter: grayscale(0) brightness(1);
+ }
+.peerlink + a > img, .peerlinkfooter > img {
+	height: 1.3rem;
+	aspect-ratio: 1/1;
+	width: auto;
+	z-index: 10;
+	margin-left: 2em;
+}
+.peerlink + a > img + span,.peerlinkfooter > img + span {
+z-index: 10;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: -0.2rem 0 0 .0vw;
+}
+.italic {
+  font-style: italic;
+}
+.bold {
+  font-weight: 900;
+  -webkit-text-stroke: .5px #fff; /* Kontur (Chrome/Safari/Edge) */
+  text-stroke: 1px #fff; /* zukünftige / experimentelle Syntax */
 }
