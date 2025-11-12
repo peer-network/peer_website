@@ -68,7 +68,7 @@ jobs:
       - name: Send Discord Notification
         if: steps.decide.outputs.type != 'none'
         env:
-          WEBAPP_DISCORD: ${{ secrets.WEBAPP_DISCORD }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           DISCORD_MENTION: ${{ needs.map_pr_to_discord.outputs.discord_mention }}
           PR_TITLE: ${{ github.event.pull_request.title }}
           PR_URL: ${{ github.event.pull_request.html_url }}
@@ -103,7 +103,7 @@ jobs:
           curl -H "Content-Type: application/json" \
                -X POST \
                -d "{\"content\": \"$MESSAGE\"}" \
-               "$WEBAPP_DISCORD"
+               "$DISCORD_WEBHOOK_URL"
 
   final_check:
     name: Final Check - Fail if Any Critical Job Failed
